@@ -3,10 +3,7 @@
   "short_name": "창조Matrix",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#070b12",
-  "theme_color": "#111827",
-  "orientation": "portrait-primary",
-  "icons": [
-    {"src":"assets/creation-bg.png","sizes":"512x512","type":"image/png","purpose":"any"}
-  ]
+  "background_color": "#070b11",
+  "theme_color": "#0b1018",
+  "icons": []
 }

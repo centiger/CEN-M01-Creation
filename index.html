@@ -2,99 +2,77 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>창조시대 Matrix</title>
-<link rel="manifest" href="manifest.webmanifest" />
-<meta name="theme-color" content="#070b12" />
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b1018">
 <style>
-:root{
-  --bg:#070b12;--panel:rgba(8,13,23,.88);--line:rgba(255,214,128,.45);--gold:#f8d37b;--text:#fff7e6;--muted:#d9c8a9;
-  --safe-top:env(safe-area-inset-top);--safe-bottom:env(safe-area-inset-bottom);
-}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent} html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden} body{touch-action:pan-y;background:linear-gradient(180deg,#03060b,#0b101b 45%,#03060b)}
-.app{width:100%;max-width:520px;margin:0 auto;min-height:100dvh;position:relative;background:#050914;box-shadow:0 0 50px rgba(0,0,0,.75)}
-.topbar{position:sticky;top:0;z-index:30;padding:calc(8px + var(--safe-top)) 10px 8px;background:linear-gradient(180deg,rgba(3,6,11,.96),rgba(3,6,11,.72));backdrop-filter:blur(10px);border-bottom:1px solid rgba(248,211,123,.22);display:flex;align-items:center;gap:8px}
-.brand{flex:1;min-width:0}.brand b{display:block;font-size:16px;letter-spacing:-.02em}.brand span{font-size:11px;color:var(--muted)}
-.topbtn{border:1px solid rgba(248,211,123,.35);background:rgba(255,255,255,.06);color:var(--text);border-radius:999px;padding:7px 9px;font-size:12px;font-weight:700}
-.map-wrap{position:relative;width:100%;overflow:hidden;background:#050914}.map-img{display:block;width:100%;height:auto;user-select:none;pointer-events:none}.map-overlay{position:absolute;inset:0;z-index:4}.hotspot{position:absolute;transform:translate(-50%,-50%);border:0;background:transparent;color:white;padding:0;cursor:pointer}.dot{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,rgba(255,255,255,.38),rgba(248,211,123,.18) 32%,rgba(16,22,36,.92) 72%);border:2px solid rgba(248,211,123,.82);box-shadow:0 0 0 4px rgba(0,0,0,.34),0 0 22px rgba(248,211,123,.42);font-size:23px;position:relative}.dot::after{content:attr(data-n);position:absolute;right:-9px;top:-10px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#b98a2e;color:#fff;font-size:13px;font-weight:900;border:2px solid #f8d37b}.dot:active{transform:scale(.94)}
-.hub{min-width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1.5px solid rgba(255,255,255,.7);background:rgba(5,9,20,.75);backdrop-filter:blur(4px);box-shadow:0 0 16px rgba(0,0,0,.55);font-size:20px}.hub::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px dashed rgba(248,211,123,.3)}
-.pulse{animation:pulse 2.2s infinite}@keyframes pulse{0%,100%{filter:drop-shadow(0 0 0 rgba(248,211,123,0))}50%{filter:drop-shadow(0 0 13px rgba(248,211,123,.95))}}
-.quick{position:fixed;left:50%;bottom:calc(10px + var(--safe-bottom));transform:translateX(-50%);z-index:35;width:min(500px,calc(100% - 16px));display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:7px;background:rgba(3,6,11,.72);border:1px solid rgba(248,211,123,.24);border-radius:18px;backdrop-filter:blur(12px)}
-.quick button{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.07);color:#f7ead0;border-radius:13px;padding:8px 3px;font-size:11px;font-weight:800}.quick small{display:block;font-size:17px;line-height:1.1}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);z-index:50;width:min(520px,100%);max-height:82dvh;background:linear-gradient(180deg,rgba(15,20,32,.98),rgba(5,8,14,.99));border:1px solid rgba(248,211,123,.32);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -20px 70px rgba(0,0,0,.75);padding:14px 16px calc(20px + var(--safe-bottom));transition:transform .25s ease;overflow:auto}.sheet.open{transform:translate(-50%,0)}.handle{width:42px;height:4px;border-radius:99px;background:rgba(255,255,255,.28);margin:0 auto 12px}.sheet h2{margin:0 0 4px;font-size:24px;letter-spacing:-.04em}.sheet .sub{color:var(--gold);font-weight:800;margin-bottom:12px}.sheet p{line-height:1.6;color:#f4e8d2;margin:8px 0}.chips{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.chip{border:1px solid rgba(248,211,123,.3);border-radius:999px;padding:6px 9px;font-size:12px;color:#f7e6bd;background:rgba(248,211,123,.07)}.links{display:grid;gap:8px;margin-top:12px}.linkcard{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.055);border-radius:14px;padding:10px 12px}.close{position:absolute;right:14px;top:14px;border:0;border-radius:50%;width:34px;height:34px;background:rgba(255,255,255,.09);color:#fff;font-size:20px}.dim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:45;display:none}.dim.show{display:block}.hint{position:absolute;left:50%;top:9.4%;transform:translateX(-50%);z-index:5;background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff0c8;font-size:11px;font-weight:800;padding:6px 10px;backdrop-filter:blur(5px);white-space:nowrap}
-.footer-space{height:74px}.toast{position:fixed;left:50%;top:calc(54px + var(--safe-top));transform:translateX(-50%);z-index:60;background:rgba(12,18,28,.92);border:1px solid rgba(248,211,123,.35);border-radius:999px;padding:8px 12px;color:#ffe8ac;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1}.legend{padding:14px 16px 90px;background:#050914}.legend h3{margin:6px 0 10px;font-size:18px}.legend-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.legend-card{border:1px solid rgba(248,211,123,.18);background:rgba(255,255,255,.05);border-radius:14px;padding:10px}.legend-card b{display:block;color:#ffe0a0;margin-bottom:4px}.legend-card span{font-size:12px;color:#d9c8a9;line-height:1.45}
-@media (min-width:521px){.app{border-left:1px solid rgba(248,211,123,.15);border-right:1px solid rgba(248,211,123,.15)}.dot{width:62px;height:62px}.quick{bottom:16px}.sheet{bottom:0}}
-@media (max-width:380px){.dot{width:48px;height:48px;font-size:20px}.dot::after{width:21px;height:21px;font-size:12px}.topbtn{font-size:11px;padding:6px 7px}.quick button{font-size:10px}.quick small{font-size:15px}.sheet h2{font-size:22px}}
+:root{--gold:#f0c66a;--gold2:#ffdf8a;--ink:#f7f1df;--muted:#d8c89d;--panel:rgba(8,12,18,.78);--line:rgba(240,198,106,.84);--soft:rgba(255,255,255,.12)}
+*{box-sizing:border-box} html,body{margin:0;padding:0;background:#070b11;color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden} button{font:inherit;color:inherit}
+.app{width:100%;max-width:480px;margin:0 auto;background:#080d14;min-height:100svh;box-shadow:0 0 50px rgba(0,0,0,.65);position:relative;}
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;background:linear-gradient(180deg,rgba(5,8,12,.95),rgba(5,8,12,.72));backdrop-filter:blur(10px);border-bottom:1px solid rgba(240,198,106,.28)}
+.brand{line-height:1}.brand b{font-size:20px;letter-spacing:-.04em}.brand span{display:block;margin-top:2px;font-size:12px;color:var(--muted)}
+.top-actions{display:flex;gap:8px}.chip{border:1px solid rgba(240,198,106,.35);background:rgba(255,255,255,.06);border-radius:999px;padding:8px 10px;font-size:12px}
+.map-wrap{position:relative;width:100%;aspect-ratio:9/18;min-height:860px;overflow:hidden;background:#111}
+.bg{position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.14)),url('assets/creation-bg-clean.jpg');background-size:cover;background-position:center top;}
+.bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.68) 0%,rgba(0,0,0,.25) 30%,rgba(0,0,0,.12) 100%)}
+.timeline{position:absolute;left:25.5%;top:4%;bottom:4%;width:3px;background:linear-gradient(180deg,transparent,var(--line) 5%,var(--line) 93%,transparent);filter:drop-shadow(0 0 8px rgba(240,198,106,.38));z-index:2}
+.section-line{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(240,198,106,.28),transparent);z-index:1}
+.node{position:absolute;left:25.8%;transform:translate(-50%,-50%);z-index:6;border:0;background:transparent;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}.node .orb{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,rgba(255,255,255,.25),rgba(16,22,31,.92) 45%,rgba(0,0,0,.92));border:2px solid rgba(245,204,112,.92);box-shadow:0 0 0 5px rgba(0,0,0,.24),0 0 28px rgba(240,198,106,.34)}.node .emoji{font-size:28px;filter:drop-shadow(0 2px 3px #000)}.num{position:absolute;right:-8px;top:-7px;width:28px;height:28px;border-radius:50%;background:#a97822;color:white;border:1px solid rgba(255,230,160,.85);display:grid;place-items:center;font-weight:900;font-size:15px}.node:active .orb{transform:scale(.96)}
+.label{position:absolute;left:36.5%;right:5.2%;transform:translateY(-50%);z-index:5;padding:13px 14px 12px;border-radius:18px;background:linear-gradient(180deg,rgba(5,8,12,.82),rgba(5,8,12,.62));border:1px solid rgba(240,198,106,.27);box-shadow:0 12px 28px rgba(0,0,0,.32);text-shadow:0 2px 7px rgba(0,0,0,.95);backdrop-filter:blur(3px)}
+.label h2{margin:0;font-size:28px;letter-spacing:-.07em}.label p{margin:6px 0 0;color:#ffe49a;font-weight:700;font-size:14px;line-height:1.42}.label small{display:block;margin-top:6px;color:#ddd1aa;font-size:12px}.label .more{position:absolute;right:12px;bottom:10px;color:rgba(255,255,255,.62);font-size:12px}
+.hub{position:absolute;right:5%;transform:translateY(-50%);z-index:7;border:1px solid rgba(255,255,255,.14);background:rgba(2,6,10,.60);backdrop-filter:blur(7px);border-radius:999px;padding:8px 11px;display:flex;align-items:center;gap:6px;font-size:12px;box-shadow:0 8px 20px rgba(0,0,0,.32)}
+.next-call{position:absolute;left:8%;right:6%;bottom:2.5%;z-index:7;border:1px solid rgba(240,198,106,.42);border-radius:22px;padding:14px 16px;background:linear-gradient(180deg,rgba(10,13,18,.86),rgba(8,12,18,.68));text-align:center;box-shadow:0 14px 34px rgba(0,0,0,.42)}.next-call b{display:block;color:#ffdf7f;font-size:18px}.next-call span{display:block;color:#d9cba2;font-size:12px;margin-top:5px}
+.bottom-nav{position:sticky;bottom:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);gap:0;background:rgba(5,8,12,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(240,198,106,.27);padding:7px 6px env(safe-area-inset-bottom)}
+.navbtn{border:0;background:transparent;padding:7px 2px;border-radius:12px;font-size:11px;color:#e7d7aa}.navbtn i{display:block;font-style:normal;font-size:21px;margin-bottom:2px}.navbtn:active,.navbtn.active{background:rgba(240,198,106,.12)}
+.sheet-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.48);z-index:50;display:none}.sheet{position:fixed;left:50%;bottom:0;transform:translateX(-50%) translateY(110%);width:100%;max-width:480px;z-index:55;background:linear-gradient(180deg,#151b24,#090d13);border:1px solid rgba(240,198,106,.28);border-bottom:0;border-radius:26px 26px 0 0;padding:18px 18px 22px;box-shadow:0 -18px 44px rgba(0,0,0,.55);transition:.25s ease}.sheet.open{transform:translateX(-50%) translateY(0)}.sheet-backdrop.open{display:block}.handle{width:50px;height:5px;background:rgba(255,255,255,.22);border-radius:999px;margin:0 auto 12px}.sheet h3{margin:0;font-size:24px}.sheet .ref{margin-top:6px;color:#ffdd7f;font-weight:800}.sheet p{line-height:1.62;color:#e9dfc5}.cards{display:grid;gap:9px;margin-top:12px}.mini{border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.055);border-radius:14px;padding:11px}.mini b{color:#ffdf8a}.close{position:absolute;right:16px;top:16px;border:0;background:rgba(255,255,255,.08);border-radius:50%;width:34px;height:34px;font-size:18px}
+@media (max-width:370px){.map-wrap{min-height:820px}.label{left:38%;right:4%;padding:11px}.label h2{font-size:24px}.label p{font-size:13px}.node .orb{width:58px;height:58px}.timeline{left:24%}.node{left:24.3%}}
+@media (min-width:481px){.map-wrap{min-height:960px}.label h2{font-size:30px}}
 </style>
 </head>
 <body>
 <div class="app">
-  <header class="topbar">
-    <div class="brand"><b>창조시대 Matrix</b><span>창조에서 바벨탑, 그리고 아브라함 소명까지</span></div>
-    <button class="topbtn" onclick="openPanel('overview')">개요</button>
-    <button class="topbtn" onclick="scrollToTop()">처음</button>
-  </header>
-  <main class="map-wrap" id="map">
-    <img class="map-img" src="assets/creation-bg.png" alt="창조시대 세로형 매트릭스 배경" />
-    <div class="hint">도트와 허브를 터치하세요</div>
-    <div class="map-overlay">
-      <button class="hotspot" style="left:15%;top:8.8%" onclick="openPanel('creation')"><span class="dot pulse" data-n="1">✦</span></button>
-      <button class="hotspot" style="left:15%;top:24.6%" onclick="openPanel('fall')"><span class="dot" data-n="2">🌳</span></button>
-      <button class="hotspot" style="left:15%;top:40.2%" onclick="openPanel('cain')"><span class="dot" data-n="3">⚔️</span></button>
-      <button class="hotspot" style="left:15%;top:56.3%" onclick="openPanel('flood')"><span class="dot" data-n="4">🌧️</span></button>
-      <button class="hotspot" style="left:15%;top:72.1%" onclick="openPanel('babel')"><span class="dot" data-n="5">🧱</span></button>
-      <button class="hotspot" style="left:15%;top:88.6%" onclick="openPanel('abraham')"><span class="dot pulse" data-n="6">★</span></button>
-      <button class="hotspot" style="left:82%;top:17.5%" onclick="openPanel('hub-creation')"><span class="hub">✨</span></button>
-      <button class="hotspot" style="left:82%;top:30.5%" onclick="openPanel('hub-fall')"><span class="hub">🍎</span></button>
-      <button class="hotspot" style="left:82%;top:56.3%" onclick="openPanel('hub-judgment')"><span class="hub">⚖️</span></button>
-      <button class="hotspot" style="left:82%;top:64.4%" onclick="openPanel('hub-covenant')"><span class="hub">🌈</span></button>
-      <button class="hotspot" style="left:82%;top:77.8%" onclick="openPanel('hub-nations')"><span class="hub">🌍</span></button>
-    </div>
+  <header class="topbar"><div class="brand"><b>창조시대 Matrix</b><span>창조에서 바벨탑까지</span></div><div class="top-actions"><button class="chip" data-open="overview">개요</button><button class="chip" data-open="links">연결</button></div></header>
+  <main class="map-wrap" aria-label="창조시대 세로형 매트릭스">
+    <div class="bg"></div><div class="timeline"></div>
+    <div class="section-line" style="top:18%"></div><div class="section-line" style="top:34%"></div><div class="section-line" style="top:49%"></div><div class="section-line" style="top:66%"></div><div class="section-line" style="top:82%"></div>
+    <button class="node" style="top:9%" data-open="creation"><span class="orb"><span class="emoji">✦</span></span><span class="num">1</span></button>
+    <section class="label" style="top:9%"><h2>창조</h2><p>태초에 하나님이 천지를 창조하시니라</p><small>창 1:1</small><span class="more">터치</span></section><button class="hub" style="top:16%" data-open="hub-creation">✦ 창조 허브</button>
+    <button class="node" style="top:25%" data-open="fall"><span class="orb"><span class="emoji">🍎</span></span><span class="num">2</span></button>
+    <section class="label" style="top:25%"><h2>타락</h2><p>선악과 사건과 에덴에서의 추방</p><small>창 3:1-24</small><span class="more">터치</span></section><button class="hub" style="top:32%" data-open="hub-fall">🍎 타락 허브</button>
+    <button class="node" style="top:41%" data-open="cain"><span class="orb"><span class="emoji">⚔️</span></span><span class="num">3</span></button>
+    <section class="label" style="top:41%"><h2>가인과 아벨</h2><p>첫 살인과 죄의 확산</p><small>창 4:1-16</small><span class="more">터치</span></section>
+    <button class="node" style="top:58%" data-open="flood"><span class="orb"><span class="emoji">🌧️</span></span><span class="num">4</span></button>
+    <section class="label" style="top:58%"><h2>노아홍수</h2><p>폭우와 깊음의 샘, 심판의 물</p><small>창 6:5-8:22</small><span class="more">터치</span></section><button class="hub" style="top:66%" data-open="hub-covenant">🌈 언약 허브</button>
+    <button class="node" style="top:75%" data-open="babel"><span class="orb"><span class="emoji">🧱</span></span><span class="num">5</span></button>
+    <section class="label" style="top:75%"><h2>바벨탑</h2><p>흙벽돌 지구라트와 언어 혼잡</p><small>창 11:1-9</small><span class="more">터치</span></section><button class="hub" style="top:83%" data-open="hub-nations">🌍 열방 허브</button>
+    <button class="node" style="top:92%" data-open="abraham"><span class="orb"><span class="emoji">⭐</span></span><span class="num">6</span></button>
+    <section class="next-call"><b>아브라함 소명 · 다음 시대</b><span>열방이 흩어진 후, 하나님은 한 사람을 부르신다.</span></section>
   </main>
-  <section class="legend">
-    <h3>허브 바로가기</h3>
-    <div class="legend-grid">
-      <button class="legend-card" onclick="openPanel('hub-creation')"><b>✨ 창조 허브</b><span>창조, 형상, 안식, 새창조</span></button>
-      <button class="legend-card" onclick="openPanel('hub-fall')"><b>🍎 타락 허브</b><span>죄의 시작과 에덴 추방</span></button>
-      <button class="legend-card" onclick="openPanel('hub-judgment')"><b>⚖️ 심판 허브</b><span>가인, 홍수, 바벨탑</span></button>
-      <button class="legend-card" onclick="openPanel('hub-covenant')"><b>🌈 언약 허브</b><span>여자의 후손, 방주, 무지개</span></button>
-      <button class="legend-card" onclick="openPanel('hub-nations')"><b>🌍 열방 허브</b><span>바벨탑, 언어 혼잡, 열방 분산</span></button>
-      <button class="legend-card" onclick="openPanel('explore')"><b>🔗 연결탐험</b><span>성막, 십자가, 오순절, 새예루살렘</span></button>
-    </div>
-  </section>
+  <nav class="bottom-nav"><button class="navbtn" data-open="overview"><i>📖</i>개요</button><button class="navbtn" data-open="timeline"><i>🕰️</i>연대표</button><button class="navbtn" data-open="hubs"><i>◎</i>허브</button><button class="navbtn" data-open="links"><i>🔗</i>연결</button><button class="navbtn" data-open="note"><i>✎</i>메모</button></nav>
 </div>
-<nav class="quick">
-  <button onclick="openPanel('hub-creation')"><small>✨</small>창조</button>
-  <button onclick="openPanel('hub-fall')"><small>🍎</small>타락</button>
-  <button onclick="openPanel('hub-judgment')"><small>⚖️</small>심판</button>
-  <button onclick="openPanel('hub-covenant')"><small>🌈</small>언약</button>
-  <button onclick="openPanel('hub-nations')"><small>🌍</small>열방</button>
-</nav>
-<div class="dim" id="dim" onclick="closePanel()"></div>
-<section class="sheet" id="sheet" aria-live="polite"><button class="close" onclick="closePanel()">×</button><div class="handle"></div><div id="content"></div></section>
-<div class="toast" id="toast">선택됨</div>
+<div class="sheet-backdrop" id="backdrop"></div><aside class="sheet" id="sheet" aria-modal="true"><div class="handle"></div><button class="close" id="close">×</button><div id="sheetContent"></div></aside>
 <script>
 const DATA={
-overview:{title:'창조시대 개요',sub:'창세기 1:1 ~ 11:9',body:['창조시대는 성경 전체 이야기의 출발점입니다. 흐름은 창조 → 타락 → 죄의 확산 → 홍수 심판 → 바벨탑 → 아브라함 소명으로 이어집니다.','이 매트릭스는 지도라기보다 세로형 구속사 스토리보드입니다. 아래로 내려가며 사건을 따라가고, 각 도트와 허브를 터치해 상세 내용을 봅니다.'],chips:['창조','타락','심판','언약','열방'],links:['창조에서 새창조로 이어지는 큰 흐름','바벨탑 이후 아브라함 소명으로 연결']},
-creation:{title:'창조',sub:'창 1:1',body:['하나님이 천지를 창조하시고 인간을 하나님의 형상으로 지으신 사건입니다.','성경 전체의 출발점이며, 마지막 새하늘과 새땅으로 이어지는 큰 주제의 시작입니다.'],chips:['천지창조','하나님의 형상','안식일'],links:['창조 → 새창조 → 새예루살렘','에덴 → 성막 → 성전 → 하나님의 임재']},
-fall:{title:'타락',sub:'창 3:1-6',body:['아담과 하와가 하나님의 명령을 어기고 선악과를 먹은 사건입니다.','죄가 인간 세계에 들어오고, 에덴에서의 추방과 관계의 깨어짐이 시작됩니다.'],chips:['선악과','유혹','추방','죄의 시작'],links:['타락 → 십자가 → 회복','에덴 추방 → 하나님의 임재 회복']},
-cain:{title:'가인과 아벨',sub:'창 4:1-8',body:['가인이 아벨을 시기하여 죽인 사건입니다.','타락 이후 죄가 개인과 가족, 사회로 확산되는 모습을 보여줍니다.'],chips:['첫 살인','시기','죄의 확산'],links:['가인 → 죄의 확산 → 홍수 심판','피 흘림 → 속죄의 필요']},
-flood:{title:'노아홍수',sub:'창 6:5-8:22',body:['세상의 악함이 가득하자 하나님이 홍수로 심판하신 사건입니다.','방주는 항해용 선박이라기보다 하나님이 준비하신 거대한 구원의 상자에 가깝습니다.'],chips:['폭우','심판의 물','방주','새로운 시작'],links:['방주 → 구원 → 세례','무지개 → 언약 → 은혜']},
-babel:{title:'바벨탑',sub:'창 11:1-9',body:['사람들이 하늘에 닿는 이름을 내고자 탑을 쌓은 사건입니다.','뾰족한 탑보다는 메소포타미아식 계단형 지구라트에 가까운 이미지가 적절합니다.'],chips:['지구라트','교만','언어 혼잡','열방 분산'],links:['바벨탑 → 오순절 → 열방 선교','흩어짐 → 아브라함 소명']},
-abraham:{title:'아브라함 소명',sub:'창 12:1-3',body:['바벨탑 이후 흩어진 열방 가운데 하나님이 한 사람 아브라함을 부르십니다.','창조시대의 끝이자 족장시대로 넘어가는 연결문입니다.'],chips:['다음 시대','언약','복의 통로'],links:['아브라함 → 이스라엘 → 메시아','열방 분산 → 열방의 복']},
-'hub-creation':{title:'창조 허브',sub:'창조 · 형상 · 안식 · 새창조',body:['하나님이 세상을 질서 있게 창조하시고, 인간에게 하나님의 형상과 사명을 주신 흐름을 탐험합니다.'],chips:['빛','에덴','형상','안식'],links:['창조 → 안식일','에덴동산 → 새예루살렘','생명나무 → 생명수 강']},
-'hub-fall':{title:'타락 허브',sub:'선악과 · 불순종 · 추방',body:['죄가 어떻게 시작되고 인간과 하나님, 인간과 인간, 인간과 창조세계의 관계가 어떻게 무너지는지 보여줍니다.'],chips:['선악과','뱀','가죽옷','추방'],links:['가죽옷 → 속죄','여자의 후손 → 메시아 약속']},
-'hub-judgment':{title:'심판 허브',sub:'가인 · 홍수 · 바벨',body:['죄가 확산될 때 하나님의 공의가 어떻게 드러나는지 보여주는 허브입니다.'],chips:['첫 살인','홍수','언어 혼잡'],links:['홍수 심판 → 새 시작','바벨 심판 → 열방 분산']},
-'hub-covenant':{title:'언약 허브',sub:'여자의 후손 · 방주 · 무지개',body:['심판 속에서도 하나님이 구원의 약속을 끊지 않으시는 흐름을 보여줍니다.'],chips:['여자의 후손','방주','무지개','은혜'],links:['무지개 언약 → 아브라함 언약','방주 → 구원 → 세례']},
-'hub-nations':{title:'열방 허브',sub:'바벨탑 · 언어 혼잡 · 열방 분산',body:['인간의 교만으로 흩어진 열방이 결국 아브라함, 오순절, 세계선교로 다시 연결되는 흐름을 보여줍니다.'],chips:['열국표','시날평지','언어 혼잡','세계선교'],links:['바벨탑 → 오순절','아브라함 → 땅의 모든 족속','열방 → 새하늘과 새땅']},
-explore:{title:'연결탐험',sub:'창조시대에서 성경 전체로',body:['창조시대의 사건들은 이후 성경 전체의 씨앗이 됩니다. 각 사건은 후대의 언약, 성막, 십자가, 오순절, 새예루살렘으로 이어집니다.'],chips:['새창조','성막','십자가','오순절','새예루살렘'],links:['창조 → 새창조 → 새예루살렘','에덴 → 성막 → 성전 → 하나님의 임재','노아방주 → 구원 → 세례','바벨탑 → 오순절 → 열방 선교']}
+ overview:{title:'창조시대 개요',ref:'창세기 1~11장',body:'창조시대는 성경 전체의 프롤로그입니다. 창조의 아름다움에서 시작하지만, 타락과 죄의 확산, 홍수 심판, 바벨탑의 교만을 거쳐 아브라함 소명으로 이어집니다.',cards:['핵심 흐름: 창조 → 타락 → 죄의 확산 → 심판 → 열방 분산','역할: 족장시대로 넘어가는 출발점','화면 원칙: 배경은 분위기, 텍스트와 상징은 HTML 레이어']},
+ creation:{title:'창조',ref:'창 1:1',body:'하나님이 말씀으로 천지를 창조하시고, 인간을 하나님의 형상으로 지으셨습니다. 창조는 성경 전체의 시작이자 새창조의 씨앗입니다.',cards:['핵심 의미: 질서, 생명, 하나님의 주권','연결: 새창조, 새예루살렘, 생명나무','허브: 창조 허브']},
+ fall:{title:'타락',ref:'창 3:1-24',body:'아담과 하와가 하나님의 명령을 어기고 선악과를 먹습니다. 죄가 인간과 세계 안에 들어오고, 에덴에서 추방됩니다.',cards:['핵심 의미: 불순종, 죄, 추방','연결: 가죽옷, 속죄, 십자가','허브: 타락 허브']},
+ cain:{title:'가인과 아벨',ref:'창 4:1-16',body:'가인이 아벨을 죽이며 죄가 개인과 가정과 사회로 확산됩니다. 타락의 결과가 인간관계의 파괴로 드러납니다.',cards:['핵심 의미: 죄의 확산','연결: 폭력, 심판, 보호 표징','허브: 심판 허브']},
+ flood:{title:'노아홍수',ref:'창 6:5-8:22',body:'세상에 죄악이 가득하자 하나님이 홍수로 심판하십니다. 방주는 항해용 배라기보다, 심판의 물 위에 보존된 거대한 구원의 구조물입니다.',cards:['표현 원칙: 폭우·먹구름·번개·범람하는 물이 주인공','방주: 돛·노·키 없는 직육면체형 목조 구조물','연결: 구원, 세례, 새 시작, 무지개 언약']},
+ babel:{title:'바벨탑',ref:'창 11:1-9',body:'사람들이 흙벽돌과 역청으로 하늘에 닿는 이름을 내고자 합니다. 바벨탑은 뾰족한 탑보다 메소포타미아 지구라트에 가까운 계단식 건축물로 표현하는 것이 좋습니다.',cards:['핵심 의미: 교만, 불순종, 언어 혼잡','표현 원칙: 지구라트, 흙벽돌, 공사 중인 도시','연결: 오순절, 열방 선교, 새하늘과 새땅']},
+ abraham:{title:'아브라함 소명',ref:'창 12:1-3',body:'바벨탑 이후 열방이 흩어지고, 하나님은 한 사람 아브라함을 부르십니다. 이것이 족장시대 Matrix로 넘어가는 연결점입니다.',cards:['다음 시대: 족장시대','핵심 질문: 왜 하나님은 아브라함을 부르셨는가?']},
+ 'hub-creation':{title:'창조 허브',ref:'하나님의 창조와 형상',body:'창조, 하나님의 형상, 안식, 생명나무를 중심으로 성경 전체의 시작을 탐험합니다.',cards:['창조 → 새창조','에덴 → 성막 → 성전','생명나무 → 새예루살렘']},
+ 'hub-fall':{title:'타락 허브',ref:'죄와 추방',body:'선악과, 뱀의 유혹, 가죽옷, 에덴 추방을 통해 구속사의 필요가 시작됩니다.',cards:['타락 → 속죄','가죽옷 → 희생제사','추방 → 회복']},
+ 'hub-covenant':{title:'언약 허브',ref:'여자의 후손과 무지개 언약',body:'심판 속에서도 하나님은 약속을 주십니다. 여자의 후손, 가죽옷, 무지개 언약이 다음 언약들의 씨앗이 됩니다.',cards:['무지개 언약 → 아브라함 언약','언약 → 시내산 → 다윗 → 새언약']},
+ 'hub-nations':{title:'열방 허브',ref:'바벨탑과 열방 분산',body:'바벨탑은 열방 분산의 사건이지만, 동시에 오순절과 세계선교로 이어지는 큰 흐름의 출발점입니다.',cards:['바벨탑 → 오순절','언어 혼잡 → 복음 선포','열방 분산 → 열방 회복']},
+ hubs:{title:'5허브 바로보기',ref:'창조 · 타락 · 심판 · 언약 · 열방',body:'창조시대는 지도보다 주제 흐름이 중요합니다. 5개 허브는 성경 전체로 이어지는 연결점입니다.',cards:['✦ 창조 허브','🍎 타락 허브','⚖️ 심판 허브','🌈 언약 허브','🌍 열방 허브']},
+ timeline:{title:'연대표',ref:'창세기 1~11장',body:'창조시대는 정확한 연대보다 사건의 신학적 흐름이 더 중요합니다.',cards:['창조','타락','가인과 아벨','노아홍수','바벨탑','아브라함 소명']},
+ links:{title:'연결탐험',ref:'창조시대의 씨앗들',body:'창조시대 사건들은 성경 전체의 큰 주제와 연결됩니다.',cards:['창조 → 새창조 → 새예루살렘','에덴동산 → 성막 → 성전 → 하나님의 임재','노아방주 → 구원 → 세례','바벨탑 → 오순절 → 열방선교']},
+ note:{title:'메모 & 노트',ref:'로컬 저장',body:'간단한 메모를 이 기기에 저장합니다.',cards:[]}
 };
-const sheet=document.getElementById('sheet'), dim=document.getElementById('dim'), content=document.getElementById('content'), toast=document.getElementById('toast');
-function openPanel(key){const d=DATA[key]||DATA.overview;content.innerHTML=`<h2>${d.title}</h2><div class="sub">${d.sub}</div>${d.body.map(p=>`<p>${p}</p>`).join('')}<div class="chips">${d.chips.map(c=>`<span class="chip">${c}</span>`).join('')}</div><div class="links">${d.links.map(l=>`<div class="linkcard">🔗 ${l}</div>`).join('')}</div>`;sheet.classList.add('open');dim.classList.add('show');showToast(d.title)}
-function closePanel(){sheet.classList.remove('open');dim.classList.remove('show')}
-function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__to);window.__to=setTimeout(()=>toast.classList.remove('show'),900)}
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel()});
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+const sheet=document.getElementById('sheet'),backdrop=document.getElementById('backdrop'),content=document.getElementById('sheetContent');
+function openSheet(key){const d=DATA[key]||DATA.overview;content.innerHTML=`<h3>${d.title}</h3><div class="ref">${d.ref}</div><p>${d.body}</p>${key==='note'?`<textarea id="memo" style="width:100%;min-height:150px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:white;padding:12px;font:inherit">${localStorage.getItem('creationMemo')||''}</textarea><button class="chip" style="margin-top:10px" onclick="localStorage.setItem('creationMemo',document.getElementById('memo').value)">저장</button>`:`<div class="cards">${(d.cards||[]).map(x=>`<div class="mini"><b>•</b> ${x}</div>`).join('')}</div>`}`;sheet.classList.add('open');backdrop.classList.add('open')}
+function closeSheet(){sheet.classList.remove('open');backdrop.classList.remove('open')}document.querySelectorAll('[data-open]').forEach(el=>el.addEventListener('click',()=>openSheet(el.dataset.open)));document.querySelectorAll('.label').forEach((el,i)=>{const keys=['creation','fall','cain','flood','babel'];el.addEventListener('click',()=>openSheet(keys[i]));});document.getElementById('close').onclick=closeSheet;backdrop.onclick=closeSheet;
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
 </script>
-</body>
-</html>
+</body></html>
