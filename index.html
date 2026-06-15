@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>CEN Bible</title>
+<title></title>
 <link rel="manifest" href="./manifest.webmanifest" />
 <meta name="theme-color" content="#071017" />
 <style>
@@ -41,6 +41,17 @@ body{display:flex;justify-content:center}
 @media(max-width:390px){.btnRow{left:51.5%;width:44.5%;gap:1%}.matrixBtn{border-radius:10px;font-size:8.3px;gap:1px;padding:0 2px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
 @media(min-width:680px){.phone{margin:18px 0;border-radius:28px}.nav{border-radius:24px 24px 0 0}.stage{padding-bottom:0}}
 </style>
+
+<script id="CEN-BLANK-TITLE-FIX">
+(function(){
+  try{
+    document.title = '';
+    window.addEventListener('load', function(){ document.title = ''; });
+    setTimeout(function(){ document.title = ''; }, 300);
+    setTimeout(function(){ document.title = ''; }, 1200);
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
 <main class="phone" aria-label="창조시대 Matrix">
