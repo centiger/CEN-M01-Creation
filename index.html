@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title></title>
+<title>CEN Bible</title>
 <link rel="manifest" href="./manifest.webmanifest" />
 <meta name="theme-color" content="#071017" />
 <style>
@@ -16,10 +16,10 @@
 html,body{margin:0;min-height:100%;background:#071017;color:#fff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Noto Sans KR","Apple SD Gothic Neo",sans-serif;overflow-x:hidden}
 body{display:flex;justify-content:center}
 .phone{position:relative;width:100%;max-width:560px;min-height:100svh;background:#071017;overflow:hidden;box-shadow:0 0 70px rgba(0,0,0,.55)}
-.stage{position:relative;width:100%;line-height:0;padding-bottom:74px;background:#071017}
+.stage{position:relative;width:100%;line-height:0;padding-bottom:92px;background:#071017}
 .bg{display:block;width:100%;height:auto;filter:saturate(1.03) contrast(1.02) brightness(.98);user-select:none;pointer-events:none}
 /* 기준 이미지 865×1819 기준으로 % 좌표화. 배경 텍스트 제거 전에도 겹침이 덜 보이도록 텍스트 뒤에만 얇은 스크림을 둔다. */
-.scrim{position:absolute;left:15.5%;width:43%;height:8.7%;border-radius:18px;background:linear-gradient(90deg,rgba(4,8,13,.46),rgba(4,8,13,.24),rgba(4,8,13,0));filter:blur(.2px);z-index:2;pointer-events:none}
+.scrim{position:absolute;left:15.5%;width:43%;height:8.7%;border-radius:14px;background:linear-gradient(90deg,rgba(4,8,13,.46),rgba(4,8,13,.24),rgba(4,8,13,0));filter:blur(.2px);z-index:2;pointer-events:none}
 .s1{top:7.15%}.s2{top:19.4%}.s3{top:32.8%}.s4{top:45.85%}.s5{top:59.2%}.s6{top:72.15%;height:7.8%}
 .titleLayer{position:absolute;z-index:5;left:50%;top:1.55%;transform:translateX(-50%);width:52%;text-align:center;line-height:1;text-shadow:0 3px 12px rgba(0,0,0,.95)}
 .titleLayer h1{margin:0;font-size:clamp(24px,6.2vw,42px);letter-spacing:.16em;color:#f6dfaa;font-weight:800}.titleLayer p{margin:7px 0 0;font-size:clamp(8.5px,1.9vw,12px);letter-spacing:.18em;color:#dfc284;font-weight:650}
@@ -34,24 +34,17 @@ body{display:flex;justify-content:center}
 .nextBtn{position:absolute;z-index:8;left:18.0%;top:78.9%;height:3.3%;min-width:22%;padding:0 4%;border:1px solid rgba(208,155,255,.66);border-radius:999px;background:linear-gradient(180deg,rgba(72,47,101,.86),rgba(25,14,43,.88));color:#f3e8ff;font-size:clamp(10px,2.45vw,15px);font-weight:850;box-shadow:0 7px 18px rgba(0,0,0,.4);text-shadow:0 1px 3px rgba(0,0,0,.75);cursor:pointer}
 .hot{position:absolute;z-index:6;border:0;background:transparent;cursor:pointer;border-radius:18px}.hot:focus-visible{outline:2px solid var(--gold);background:rgba(247,216,137,.11)}
 .e{left:0;width:100%;height:13.6%}.e1{top:7.2%}.e2{top:20.8%}.e3{top:34.2%}.e4{top:47.4%}.e5{top:60.7%}.e6{top:73.9%;height:12.8%}
-.nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:560px;height:calc(74px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);display:flex;z-index:30;background:linear-gradient(to top,rgba(4,8,12,.97),rgba(10,20,27,.86));border-top:1px solid rgba(247,216,137,.22);backdrop-filter:blur(16px)}
-.nav button{flex:1;border:0;background:transparent;color:rgba(255,255,255,.72);font-weight:850;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}.nav button.active{color:var(--gold)}.nav i{font-style:normal;font-size:22px;line-height:1}
-.sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheet p{margin:0 0 12px;color:rgba(255,255,255,.86);line-height:1.65;font-size:15px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
+.bottomDock{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:560px;z-index:30;padding:5px 10px calc(7px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(4,8,12,.98),rgba(9,18,26,.92));border-top:1px solid rgba(247,216,137,.24);box-shadow:0 -10px 24px rgba(0,0,0,.42);backdrop-filter:blur(16px)}
+.coreFlow{margin:0 0 4px;text-align:center;color:#f7d889;font-weight:900;line-height:1.18;font-size:clamp(10px,2.65vw,14px);letter-spacing:-.055em;text-shadow:0 2px 6px rgba(0,0,0,.85)}
+.coreFlow small{display:block;margin-bottom:1px;color:#d7b565;font-size:clamp(7px,1.9vw,10px);font-weight:800;letter-spacing:-.03em;opacity:.95}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.nav a{min-height:34px;border:1.2px solid rgba(247,216,137,.42);border-radius:10px;background:linear-gradient(180deg,rgba(18,28,36,.92),rgba(8,15,22,.9));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 5px 12px rgba(0,0,0,.30);color:#fff4d8;text-decoration:none;font-size:clamp(10px,2.55vw,13px);font-weight:950;display:flex;align-items:center;justify-content:center;line-height:1.0;text-align:center;letter-spacing:-.06em;text-shadow:0 2px 5px rgba(0,0,0,.75)}
+.nav a.active{background:linear-gradient(180deg,#d49a22,#9b660d);border-color:rgba(255,224,142,.82);color:#fff8e6;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 5px 13px rgba(0,0,0,.34)}
+.sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheet p{margin:0 0 12px;color:rgba(255,255,255,.86);line-height:1.65;font-size:15px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(18px);max-width:min(92vw,500px);background:rgba(8,13,18,.92);border:1px solid rgba(247,216,137,.32);color:#ffe7aa;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:850;opacity:0;transition:.22s;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.4)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 @media(max-width:390px){.btnRow{left:51.5%;width:44.5%;gap:1%}.matrixBtn{border-radius:10px;font-size:8.3px;gap:1px;padding:0 2px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
-@media(min-width:680px){.phone{margin:18px 0;border-radius:28px}.nav{border-radius:24px 24px 0 0}.stage{padding-bottom:0}}
+@media(min-width:680px){.phone{margin:18px 0;border-radius:28px}.bottomDock{border-radius:24px 24px 0 0}}
 </style>
-
-<script id="CEN-BLANK-TITLE-FIX">
-(function(){
-  try{
-    document.title = '';
-    window.addEventListener('load', function(){ document.title = ''; });
-    setTimeout(function(){ document.title = ''; }, 300);
-    setTimeout(function(){ document.title = ''; }, 1200);
-  }catch(e){}
-})();
-</script>
 </head>
 <body>
 <main class="phone" aria-label="창조시대 Matrix">
@@ -74,19 +67,20 @@ body{display:flex;justify-content:center}
     <button class="hot e e1" data-key="creationHub" aria-label="창조 허브"></button><button class="hot e e2" data-key="fallHub" aria-label="타락 허브"></button><button class="hot e e3" data-key="cainHub" aria-label="가인과 아벨 허브"></button><button class="hot e e4" data-key="judgmentHub" aria-label="심판 허브"></button><button class="hot e e5" data-key="nationsHub" aria-label="바벨탑 허브"></button><button class="hot e e6" data-key="abrahamHub" aria-label="아브라함 소명 허브"></button>
   </section>
 </main>
-<nav class="nav" aria-label="하단 메뉴"><button class="active" data-nav="matrix"><i>✦</i><span>매트릭스</span></button><button data-nav="timeline"><i>◷</i><span>타임라인</span></button><button data-nav="connect"><i>◎</i><span>연결 탐험</span></button><button data-nav="global"><i>▣</i><span>통합 탐험</span></button><button data-nav="settings"><i>⚙</i><span>설정</span></button></nav>
+<footer class="bottomDock" aria-label="창조시대 하단 네비게이터">
+  <div class="coreFlow"><small>창조시대 핵심흐름</small>창조 → 타락 → 가인과 아벨 → 노아홍수 → 바벨탑 → 아브라함 소명</div>
+  <nav class="nav" aria-label="하단 메뉴">
+    <a href="https://centiger.github.io/CEN-Chronology/?view=timeline">성경연표</a>
+    <a href="https://centiger.github.io/CEN-Chronology/">주제탐험</a>
+    <a href="https://centiger.github.io/CEN-Bible2.0/#overview66">한눈에 성경</a>
+    <a class="active" href="./hubs/index.html">허브</a>
+  </nav>
+</footer>
 <div class="sheetBack" id="backdrop"></div><section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="grab"></div><button class="close" id="close" aria-label="닫기">×</button><h2 id="sheetTitle"></h2><div class="meta" id="sheetMeta"></div><p id="sheetBody"></p><div class="chips" id="chips"></div></section><div class="toast" id="toast"></div>
 <script>
 const DATA={creation:{title:'창조',meta:'창세기 1:1',body:'하나님이 천지를 창조하시고 세상의 질서와 생명을 세우신 시작입니다. 창조는 새창조와 새 예루살렘으로 이어지는 성경 전체의 출발점입니다.',chips:['천지창조','하나님의 형상','안식','새창조']},fall:{title:'타락',meta:'창세기 3:1-6',body:'아담과 하와가 하나님의 명령을 어기며 죄와 죽음이 인간 역사 안으로 들어옵니다. 에덴에서의 추방은 회복을 향한 구속사의 시작이 됩니다.',chips:['선악과','죄의 시작','추방','여자의 후손']},cain:{title:'가인과 아벨',meta:'창세기 4:1-8',body:'가인이 아벨을 시기하여 죽임으로 죄가 개인을 넘어 관계와 사회 안으로 확산됩니다. 심판과 긍휼이 함께 드러나는 장면입니다.',chips:['첫 살인','죄의 확산','놋 땅','심판']},flood:{title:'노아홍수',meta:'창세기 6:5-8:22',body:'세상의 악함에 대한 하나님의 심판이 홍수로 임하지만, 하나님은 방주를 통해 노아와 가족을 보존하십니다. 방주는 항해선보다 구원을 위한 거대한 목재 구조물에 가깝습니다.',chips:['폭우','홍수 심판','방주','새 시작']},babel:{title:'바벨탑',meta:'창세기 11:1-9',body:'사람들이 이름을 내고 흩어짐을 면하려고 탑을 쌓지만, 하나님은 언어를 혼잡하게 하시고 민족을 흩으십니다. 이후 하나님은 한 사람 아브라함을 부르십니다.',chips:['지구라트','교만','언어 혼잡','열방 분산']},abraham:{title:'아브라함 소명',meta:'창세기 12:1-3',body:'바벨 이후 흩어진 열방 가운데 하나님은 아브라함을 부르시고, 그를 통해 땅의 모든 족속이 복을 얻게 하겠다고 약속하십니다.',chips:['다음 시대','언약','믿음의 여정','족장시대']},creationHub:{title:'창조 허브',meta:'창조 · 형상 · 안식',body:'천지창조, 하나님의 형상, 에덴동산, 안식의 의미를 묶어 성경 전체의 시작을 보여줍니다.',chips:['창조','형상','에덴','안식']},fallHub:{title:'타락 허브',meta:'불순종 · 죄 · 추방',body:'선악과 사건, 뱀의 유혹, 범죄, 에덴 추방을 중심으로 죄의 시작과 회복의 필요성을 탐험합니다.',chips:['선악과','유혹','죄','추방']},covenantHub:{title:'언약 허브',meta:'여자의 후손 · 무지개 언약',body:'타락 직후 주어진 여자의 후손 약속과 홍수 이후 무지개 언약을 중심으로, 심판 가운데 이어지는 하나님의 구속 약속을 보여줍니다.',chips:['여자의 후손','가죽옷','노아 언약','무지개']},judgmentHub:{title:'심판 허브',meta:'가인 · 홍수 · 바벨',body:'가인과 아벨, 노아홍수, 바벨탑을 연결하여 죄의 확산과 하나님의 공의를 보여줍니다.',chips:['가인','홍수','바벨탑','공의']},nationsHub:{title:'열방 허브',meta:'흩어짐 · 회복',body:'바벨의 흩어짐에서 아브라함의 부르심, 오순절, 세계선교로 이어지는 열방 회복의 흐름을 보여줍니다.',chips:['열국표','아브라함','오순절','세계선교']},patriarch:{title:'족장시대로',meta:'다음 Matrix 예고',body:'다음 시대는 아브라함, 이삭, 야곱, 요셉으로 이어지는 족장시대입니다. 바벨 이후 하나님은 한 사람을 부르셔서 열방을 향한 복의 통로로 삼으십니다.',chips:['아브라함','이삭','야곱','요셉']}};
 const sheet=document.getElementById('sheet'),backdrop=document.getElementById('backdrop'),title=document.getElementById('sheetTitle'),meta=document.getElementById('sheetMeta'),body=document.getElementById('sheetBody'),chips=document.getElementById('chips'),toast=document.getElementById('toast');function openSheet(key){const d=DATA[key]||DATA.creation;title.textContent=d.title;meta.textContent=d.meta;body.textContent=d.body;chips.innerHTML=d.chips.map(c=>`<span class="chip">${c}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showToast(b.textContent.trim()+' 보기');}));function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
 </script>
-
-<div id="cen-bottom-nav-template" style="position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#111;color:#fff;display:flex;justify-content:space-around;padding:10px 0;font-size:12px;">
-  <a href="https://centiger.github.io/CEN-Chronology/" style="color:white;text-decoration:none;">📅 성경연표</a>
-  <a href="https://centiger.github.io/CEN-Chronology/" style="color:white;text-decoration:none;">🔍 주제탐험</a>
-  <a href="https://centiger.github.io/CEN-Bible2.0/" style="color:white;text-decoration:none;">📖 한눈에성경</a>
-  <a href="https://centiger.github.io/CEN-Bible2.0/" style="color:white;text-decoration:none;">🧭 시대탐험</a>
-</div>
 
 </body>
 </html>
