@@ -26,27 +26,40 @@ body{display:flex;justify-content:center}
 .s1{top:7.15%}.s2{top:19.4%}.s3{top:32.8%}.s4{top:45.85%}.s5{top:59.2%}.s6{top:72.15%;height:7.8%}
 .titleLayer{position:absolute;z-index:5;left:50%;top:1.55%;transform:translateX(-50%);width:52%;text-align:center;line-height:1;text-shadow:0 3px 12px rgba(0,0,0,.95)}
 .titleLayer h1{margin:0;font-size:clamp(24px,6.2vw,42px);letter-spacing:.16em;color:#f6dfaa;font-weight:800}.titleLayer p{margin:7px 0 0;font-size:clamp(8.5px,1.9vw,12px);letter-spacing:.18em;color:#dfc284;font-weight:650}
-.eventTitle{pointer-events:none;position:absolute;z-index:6;left:18.0%;width:44%;line-height:1.04;text-shadow:0 3px 8px rgba(0,0,0,.95),0 0 18px rgba(0,0,0,.82)}
+.eventTitle{position:absolute;z-index:6;left:18.0%;width:44%;line-height:1.04;text-shadow:0 3px 8px rgba(0,0,0,.95),0 0 18px rgba(0,0,0,.82)}
 .eventTitle h2{margin:0;color:var(--white);font-size:clamp(11px,2.75vw,18px);font-weight:600;letter-spacing:-.055em;white-space:nowrap}.eventTitle .desc{margin:.32em 0 0;color:#ffe28a;font-size:clamp(7.8px,1.75vw,10.5px);font-weight:700;line-height:1.28;letter-spacing:-.05em;word-break:keep-all;overflow-wrap:normal}.eventTitle .ref{margin:.42em 0 0;color:#fff;font-size:clamp(7.4px,1.55vw,9.2px);font-weight:650;opacity:.95}
 .t1{top:7.35%}.t2{top:19.95%}.t3{top:33.3%}.t4{top:46.4%}.t5{top:59.8%}.t6{top:72.8%}
 /* 버튼은 각 사건 박스의 상단~2/3 지점 사이, 같은 X축 기준으로 정렬 */
-.btnRow{position:absolute;z-index:20;left:51.2%;width:44.4%;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1.4%;height:3.35%;line-height:1}
+.btnRow{position:absolute;z-index:7;left:51.2%;width:44.4%;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1.4%;height:3.35%;line-height:1}
 .r1{top:13.65%}.r2{top:24.6%}.r3{top:35.85%}.r4{top:52.9%}.r5{top:66.55%}
-.matrixBtn{border:1px solid rgba(247,216,137,.52);border-radius:12px;background:linear-gradient(180deg,rgba(18,21,24,.84),rgba(5,8,12,.82));box-shadow:0 6px 16px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(5px);color:#f7ead0;font-size:clamp(8px,1.85vw,10.5px);font-weight:850;text-shadow:0 1px 2px rgba(0,0,0,.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;line-height:1.02;padding:0 2px;cursor:pointer;min-width:0;white-space:normal;text-align:center;word-break:keep-all;overflow-wrap:normal}.matrixBtn .ico{font-size:1.22em;color:var(--gold);line-height:1}.matrixBtn.judgment{border-color:rgba(235,132,171,.75);background:linear-gradient(180deg,rgba(64,33,49,.86),rgba(18,10,17,.82))}.matrixBtn.covenant{border-color:rgba(208,155,255,.72);background:linear-gradient(180deg,rgba(51,36,75,.85),rgba(14,10,24,.83))}.matrixBtn.nations{border-color:rgba(245,185,81,.75);background:linear-gradient(180deg,rgba(83,55,18,.86),rgba(22,14,6,.82))}
+.matrixBtn{border:1px solid rgba(247,216,137,.52);border-radius:12px;background:linear-gradient(180deg,rgba(18,21,24,.84),rgba(5,8,12,.82));box-shadow:0 6px 16px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(5px);color:#f7ead0;font-size:clamp(8px,1.85vw,10.5px);font-weight:850;text-shadow:0 1px 2px rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;gap:4px;line-height:1.05;padding:0 4px;cursor:pointer;min-width:0;white-space:normal;text-align:center}.matrixBtn .ico{font-size:1.22em;color:var(--gold);line-height:1}.matrixBtn.judgment{border-color:rgba(235,132,171,.75);background:linear-gradient(180deg,rgba(64,33,49,.86),rgba(18,10,17,.82))}.matrixBtn.covenant{border-color:rgba(208,155,255,.72);background:linear-gradient(180deg,rgba(51,36,75,.85),rgba(14,10,24,.83))}.matrixBtn.nations{border-color:rgba(245,185,81,.75);background:linear-gradient(180deg,rgba(83,55,18,.86),rgba(22,14,6,.82))}
 /* 6번은 사건이 아니라 다음 시대 입구로 보이게 상징 오른쪽 아래로 분리 */
-.nextBtn{position:absolute;z-index:20;left:18.0%;top:78.9%;height:3.3%;min-width:22%;padding:0 4%;border:1px solid rgba(208,155,255,.66);border-radius:999px;background:linear-gradient(180deg,rgba(72,47,101,.86),rgba(25,14,43,.88));color:#f3e8ff;font-size:clamp(10px,2.45vw,15px);font-weight:850;box-shadow:0 7px 18px rgba(0,0,0,.4);text-shadow:0 1px 3px rgba(0,0,0,.75);cursor:pointer}
-.hot{position:absolute;z-index:5;border:0;background:transparent;cursor:pointer;border-radius:18px}.hot:focus-visible{outline:2px solid var(--gold);background:rgba(247,216,137,.11)}
-.e{left:0;width:50%;height:13.6%}.e1{top:7.2%}.e2{top:20.8%}.e3{top:34.2%}.e4{top:47.4%}.e5{top:60.7%}.e6{top:73.9%;height:12.8%}
+.nextBtn{position:absolute;z-index:8;left:18.0%;top:78.9%;height:3.3%;min-width:22%;padding:0 4%;border:1px solid rgba(208,155,255,.66);border-radius:999px;background:linear-gradient(180deg,rgba(72,47,101,.86),rgba(25,14,43,.88));color:#f3e8ff;font-size:clamp(10px,2.45vw,15px);font-weight:850;box-shadow:0 7px 18px rgba(0,0,0,.4);text-shadow:0 1px 3px rgba(0,0,0,.75);cursor:pointer}
+.hot{position:absolute;z-index:6;border:0;background:transparent;cursor:pointer;border-radius:18px}.hot:focus-visible{outline:2px solid var(--gold);background:rgba(247,216,137,.11)}
+.e{left:0;width:100%;height:13.6%}.e1{top:7.2%}.e2{top:20.8%}.e3{top:34.2%}.e4{top:47.4%}.e5{top:60.7%}.e6{top:73.9%;height:12.8%}
 .bottomDock{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:560px;z-index:30;padding:5px 10px calc(7px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(4,8,12,.98),rgba(9,18,26,.92));border-top:1px solid rgba(247,216,137,.24);box-shadow:0 -10px 24px rgba(0,0,0,.42);backdrop-filter:blur(16px)}
 .coreFlow{margin:0 0 4px;text-align:center;color:#f7d889;font-weight:900;line-height:1.18;font-size:clamp(10px,2.65vw,14px);letter-spacing:-.055em;text-shadow:0 2px 6px rgba(0,0,0,.85)}
 .coreFlow small{display:block;margin-bottom:1px;color:#d7b565;font-size:clamp(7px,1.9vw,10px);font-weight:800;letter-spacing:-.03em;opacity:.95}
 .nav{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
 .nav a{min-height:34px;border:1.2px solid rgba(247,216,137,.42);border-radius:10px;background:linear-gradient(180deg,rgba(18,28,36,.92),rgba(8,15,22,.9));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 5px 12px rgba(0,0,0,.30);color:#fff4d8;text-decoration:none;font-size:clamp(10px,2.55vw,13px);font-weight:950;display:flex;align-items:center;justify-content:center;line-height:1.0;text-align:center;letter-spacing:-.06em;text-shadow:0 2px 5px rgba(0,0,0,.75)}
 .nav a.active{background:linear-gradient(180deg,#d49a22,#9b660d);border-color:rgba(255,224,142,.82);color:#fff8e6;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 5px 13px rgba(0,0,0,.34)}
-.sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheetBody{margin-top:12px;color:rgba(255,255,255,.9);line-height:1.6;font-size:15px}.exploreCard{border:1px solid rgba(247,216,137,.18);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border-radius:18px;padding:14px 14px;margin:10px 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}.exploreCard.hero{border-color:rgba(247,216,137,.36);background:linear-gradient(180deg,rgba(247,216,137,.14),rgba(247,216,137,.045))}.cardLabel{display:flex;align-items:center;gap:7px;color:#f7d889;font-size:12px;font-weight:950;letter-spacing:-.03em;margin-bottom:7px}.cardMain{font-size:19px;line-height:1.35;color:#fff7df;font-weight:950;letter-spacing:-.055em}.cardAnswer{font-size:16px;line-height:1.45;color:#fff1c0;font-weight:900;letter-spacing:-.04em}.cardText{font-size:14.5px;line-height:1.72;color:rgba(255,255,255,.86);white-space:pre-line;letter-spacing:-.035em}.flowBox{display:grid;gap:8px;margin-top:4px}.flowItem{display:flex;align-items:center;gap:9px}.flowIcon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(247,216,137,.12);border:1px solid rgba(247,216,137,.25);font-size:16px;flex:0 0 auto}.flowText{font-size:14px;color:#fff6dd;font-weight:850;line-height:1.25}.flowArrow{margin-left:15px;color:#f7d889;opacity:.76;font-weight:900}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
+.sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheet p{margin:0 0 12px;color:rgba(255,255,255,.86);line-height:1.65;font-size:15px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(18px);max-width:min(92vw,500px);background:rgba(8,13,18,.92);border:1px solid rgba(247,216,137,.32);color:#ffe7aa;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:850;opacity:0;transition:.22s;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.4)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:390px){.btnRow{left:51.5%;width:44.5%;gap:1%}.matrixBtn{border-radius:10px;font-size:7.6px;gap:0;padding:0 1px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
+@media(max-width:390px){.btnRow{left:51.5%;width:44.5%;gap:1%}.matrixBtn{border-radius:10px;font-size:8.3px;gap:1px;padding:0 2px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
 @media(min-width:680px){.phone{margin:18px 0;border-radius:28px}.bottomDock{border-radius:24px 24px 0 0}}
+
+/* CEN 3.0 Meaning / Panorama 탐험형 팝업 */
+.btnRow{grid-auto-columns:minmax(0,1fr)}
+.matrixBtn{word-break:keep-all;overflow:hidden}
+.explore{display:flex;flex-direction:column;gap:10px;margin-top:8px;text-align:left;line-height:1.5}
+.exploreCard{border:1px solid rgba(247,216,137,.22);border-radius:16px;background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));padding:12px 13px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.exploreCard .label{display:block;margin-bottom:5px;color:#f7d889;font-size:12px;font-weight:950;letter-spacing:-.02em}
+.exploreCard .main{color:#fffaf0;font-size:17px;font-weight:950;line-height:1.35;letter-spacing:-.06em}
+.exploreCard .text{color:rgba(255,255,255,.88);font-size:14px;font-weight:600;line-height:1.62;letter-spacing:-.045em;white-space:pre-line}
+.exploreCard.answer{background:linear-gradient(180deg,rgba(247,216,137,.15),rgba(247,216,137,.055));border-color:rgba(247,216,137,.36)}
+.flow{display:flex;flex-direction:column;gap:7px;margin-top:4px}.flowItem{display:flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.11);background:rgba(0,0,0,.16);border-radius:13px;padding:8px 10px}.flowIcon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(247,216,137,.13);font-size:16px;flex:0 0 auto}.flowText{display:flex;flex-direction:column;gap:1px}.flowText b{font-size:14px;color:#fffaf0}.flowText small{font-size:11px;color:#e6c878;font-weight:800}.arrow{align-self:center;color:#f7d889;font-weight:900;opacity:.95;margin:-2px 0}.sheet p#sheetBody{margin-bottom:0}.sheet .meta{line-height:1.35}
+@media(max-width:390px){.exploreCard{padding:10px 11px}.exploreCard .main{font-size:15px}.exploreCard .text{font-size:13px}.flowItem{padding:7px 9px}.flowIcon{width:25px;height:25px}}
+
 </style>
 </head>
 <body>
@@ -61,11 +74,11 @@ body{display:flex;justify-content:center}
     <article class="eventTitle t4"><h2>노아홍수</h2><div class="desc">악한 세상을 향한<br>하나님의 심판, 홍수</div><div class="ref">창 6:5-8:22</div></article>
     <article class="eventTitle t5"><h2>바벨탑</h2><div class="desc">하늘에 닿는 이름을 내고자<br>바벨탑을 쌓다</div><div class="ref">창 11:1-9</div></article>
     <article class="eventTitle t6"><h2>아브라함 소명</h2><div class="desc">하나님이 아브라함을 부르시고<br>언약을 세우시다</div><div class="ref">창 12:1-3</div></article>
-    <div class="btnRow r1"><button class="matrixBtn" data-key="creationHub"><span class="ico">▦</span>창조<br>허브</button><button class="matrixBtn" data-key="creationMeaning"><span class="ico">⌁</span>연결<br>탐험</button><button class="matrixBtn" data-key="creationPanorama"><span class="ico">▣</span>통합<br>탐험</button></div>
-    <div class="btnRow r2"><button class="matrixBtn" data-key="fallHub"><span class="ico">▦</span>타락<br>허브</button><button class="matrixBtn covenant" data-key="covenantHub"><span class="ico">✦</span>언약<br>허브</button><button class="matrixBtn judgment" data-key="judgmentHub"><span class="ico">⚖</span>심판<br>허브</button><button class="matrixBtn" data-key="fallMeaning"><span class="ico">⌁</span>연결</button><button class="matrixBtn" data-key="fallPanorama"><span class="ico">▣</span>통합</button></div>
-    <div class="btnRow r3"><button class="matrixBtn" data-key="cainHub"><span class="ico">◎</span>가인<br>허브</button><button class="matrixBtn" data-key="cainMeaning"><span class="ico">⌁</span>연결<br>탐험</button><button class="matrixBtn" data-key="cainPanorama"><span class="ico">▣</span>통합<br>탐험</button></div>
-    <div class="btnRow r4"><button class="matrixBtn judgment" data-key="judgmentHub"><span class="ico">⚖</span>심판<br>허브</button><button class="matrixBtn covenant" data-key="covenantHub"><span class="ico">✦</span>언약<br>허브</button><button class="matrixBtn" data-key="floodMeaning"><span class="ico">⌁</span>연결<br>탐험</button><button class="matrixBtn" data-key="floodPanorama"><span class="ico">▣</span>통합</button></div>
-    <div class="btnRow r5"><button class="matrixBtn nations" data-key="nationsHub"><span class="ico">◎</span>열방<br>허브</button><button class="matrixBtn judgment" data-key="judgmentHub"><span class="ico">⚖</span>심판<br>허브</button><button class="matrixBtn covenant" data-key="covenantHub"><span class="ico">✦</span>언약<br>허브</button><button class="matrixBtn" data-key="babelMeaning"><span class="ico">⌁</span>연결</button><button class="matrixBtn" data-key="babelPanorama"><span class="ico">▣</span>통합</button></div>
+    <div class="btnRow r1"><button class="matrixBtn" data-key="creationHub"><span class="ico">▦</span>창조<br>허브</button><button class="matrixBtn" data-key="creation" data-type="meaning"><span class="ico">⌁</span>연결<br>탐험</button><button class="matrixBtn" data-key="creation" data-type="panorama"><span class="ico">▣</span>통합<br>탐험</button></div>
+    <div class="btnRow r2"><button class="matrixBtn" data-key="fallHub"><span class="ico">▦</span>타락<br>허브</button><button class="matrixBtn covenant" data-key="covenantHub"><span class="ico">✦</span>언약<br>허브</button><button class="matrixBtn judgment" data-key="judgmentHub"><span class="ico">⚖</span>심판<br>허브</button><button class="matrixBtn" data-key="fall" data-type="meaning"><span class="ico">⌁</span>연결</button><button class="matrixBtn" data-key="fall" data-type="panorama"><span class="ico">▣</span>통합</button></div>
+    <div class="btnRow r3"><button class="matrixBtn" data-key="cainHub"><span class="ico">◎</span>가인<br>허브</button><button class="matrixBtn" data-key="cain" data-type="meaning"><span class="ico">⌁</span>연결<br>탐험</button><button class="matrixBtn" data-key="cain" data-type="panorama"><span class="ico">▣</span>통합<br>탐험</button></div>
+    <div class="btnRow r4"><button class="matrixBtn judgment" data-key="judgmentHub"><span class="ico">⚖</span>심판<br>허브</button><button class="matrixBtn covenant" data-key="covenantHub"><span class="ico">✦</span>언약<br>허브</button><button class="matrixBtn" data-key="flood" data-type="meaning"><span class="ico">⌁</span>연결<br>탐험</button><button class="matrixBtn" data-key="flood" data-type="panorama"><span class="ico">▣</span>통합</button></div>
+    <div class="btnRow r5"><button class="matrixBtn nations" data-key="nationsHub"><span class="ico">◎</span>열방<br>허브</button><button class="matrixBtn judgment" data-key="judgmentHub"><span class="ico">⚖</span>심판<br>허브</button><button class="matrixBtn covenant" data-key="covenantHub"><span class="ico">✦</span>언약<br>허브</button><button class="matrixBtn" data-key="babel" data-type="meaning"><span class="ico">⌁</span>연결</button><button class="matrixBtn" data-key="babel" data-type="panorama"><span class="ico">▣</span>통합</button></div>
     <button class="nextBtn" data-key="patriarch">족장시대로 ›</button>
     <button class="hot e e1" data-key="creationHub" aria-label="창조 허브"></button><button class="hot e e2" data-key="fallHub" aria-label="타락 허브"></button><button class="hot e e3" data-key="cainHub" aria-label="가인과 아벨 허브"></button><button class="hot e e4" data-key="judgmentHub" aria-label="심판 허브"></button><button class="hot e e5" data-key="nationsHub" aria-label="바벨탑 허브"></button><button class="hot e e6" data-key="abrahamHub" aria-label="아브라함 소명 허브"></button>
   </section>
@@ -79,213 +92,22 @@ body{display:flex;justify-content:center}
     <a class="active" href="./hubs/index.html">허브</a>
   </nav>
 </footer>
-<div class="sheetBack" id="backdrop"></div><section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="grab"></div><button class="close" id="close" aria-label="닫기">×</button><h2 id="sheetTitle"></h2><div class="meta" id="sheetMeta"></div><div class="sheetBody" id="sheetBody"></div><div class="chips" id="chips"></div></section><div class="toast" id="toast"></div>
+<div class="sheetBack" id="backdrop"></div><section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="grab"></div><button class="close" id="close" aria-label="닫기">×</button><h2 id="sheetTitle"></h2><div class="meta" id="sheetMeta"></div><p id="sheetBody"></p><div class="chips" id="chips"></div></section><div class="toast" id="toast"></div>
 <script>
-const DATA={
-"creationMeaning": {
-"title": "창조 연결탐험",
-"meta": "질문 · 왜 인간은 존귀한가?",
-"body": "인간은 하나님의 형상으로 창조되었다.\n\n인간은 하나님을 대신하여 세상을 다스리는 청지기로 부름받았다.\n\n창조는 인간의 존엄성과 가치의 출발점이며, 모든 관계와 사명의 기초가 된다.",
-"chips": [
-"하나님의 형상",
-"생명",
-"청지기",
-"안식"
-]
-},
-"creationPanorama": {
-"title": "창조 통합탐험",
-"meta": "창조에서 새창조까지",
-"body": "창조는 성경 전체 이야기의 시작점이다.\n\n하나님은 완전한 세상을 창조하셨지만 죄로 인해 깨어졌다.\n\n그러나 하나님은 구원의 역사를 통해 창조를 회복하시며, 마지막에는 새하늘과 새땅으로 완성하신다.\n\n흐름: 창조 → 타락 → 구속 → 새창조",
-"chips": [
-"창조",
-"타락",
-"구속",
-"새창조"
-]
-},
-"fallMeaning": {
-"title": "타락 연결탐험",
-"meta": "질문 · 왜 구원이 필요한가?",
-"body": "하나님은 인간에게 자유롭게 순종할 수 있는 선택을 주셨다.\n\n그러나 인간은 하나님의 말씀보다 자신의 판단을 더 신뢰하며 선악과를 먹었다.\n\n그 결과 하나님과의 관계가 깨어지고 죄와 죽음이 세상에 들어오게 되었다.\n\n타락은 단순한 실수가 아니라 하나님을 떠난 인간의 근본 문제를 보여준다.",
-"chips": [
-"죄",
-"불순종",
-"유혹",
-"죽음",
-"단절"
-]
-},
-"fallPanorama": {
-"title": "타락 통합탐험",
-"meta": "타락에서 십자가까지",
-"body": "타락은 성경 전체 문제의 시작점이다.\n\n인간은 스스로 죄의 문제를 해결할 수 없게 되었고, 하나님은 여자의 후손을 통해 구원의 약속을 주셨다.\n\n성경의 모든 구속 역사는 결국 타락으로 인해 시작된 죄의 문제를 해결하기 위한 하나님의 계획이다.\n\n예수 그리스도의 십자가는 창세기 3장에서 시작된 문제에 대한 하나님의 해답이다.\n\n흐름: 타락 → 여자의 후손 약속 → 언약 → 메시아 → 십자가 → 회복",
-"chips": [
-"타락",
-"여자의 후손",
-"메시아",
-"십자가",
-"회복"
-]
-},
-"cainMeaning": {
-"title": "가인과 아벨 연결탐험",
-"meta": "질문 · 참된 예배는 무엇인가?",
-"body": "가인과 아벨은 모두 하나님께 제사를 드렸지만 하나님은 아벨의 제사는 받으시고 가인의 제사는 받지 않으셨다.\n\n문제는 제물의 종류보다 하나님을 향한 마음과 믿음에 있었다.\n\n가인은 분노와 시기를 다스리지 못했고 결국 동생 아벨을 죽였다.\n\n이 사건은 죄가 인간의 마음속에서 어떻게 자라나고 확산되는지를 보여준다.",
-"chips": [
-"예배",
-"믿음",
-"시기",
-"분노",
-"살인"
-]
-},
-"cainPanorama": {
-"title": "가인과 아벨 통합탐험",
-"meta": "아벨에서 그리스도까지",
-"body": "아벨은 믿음으로 하나님께 제사를 드린 최초의 의인으로 소개된다.\n\n그는 죄 없는 자가 죄로 인해 죽임을 당한 첫 번째 인물이기도 하다.\n\n성경은 아벨의 죽음에서 끝나지 않고, 더 의로운 분이신 예수 그리스도께로 시선을 이끈다.\n\n아벨의 피는 억울함을 외쳤지만, 예수님의 피는 죄인을 위한 용서와 구원을 선포한다.\n\n흐름: 아벨 → 의인의 고난 → 선지자들 → 예수 그리스도 → 구원",
-"chips": [
-"아벨",
-"의인의 고난",
-"그리스도",
-"구원"
-]
-},
-"floodMeaning": {
-"title": "노아홍수 연결탐험",
-"meta": "질문 · 왜 심판이 필요한가?",
-"body": "세상은 죄악으로 가득 차게 되었고 사람들은 하나님을 떠나 자신의 길을 따라 살아갔다.\n\n하나님은 홍수로 세상을 심판하셨지만 노아와 그의 가족은 방주를 통해 구원하셨다.\n\n노아의 구원은 인간의 의로움 때문이 아니라 하나님의 은혜 때문이었다.\n\n노아홍수는 하나님이 죄를 그냥 지나치지 않으시는 공의의 하나님이시며, 동시에 구원의 길을 마련하시는 은혜의 하나님이심을 보여준다.",
-"chips": [
-"심판",
-"은혜",
-"방주",
-"순종",
-"구원"
-]
-},
-"floodPanorama": {
-"title": "노아홍수 통합탐험",
-"meta": "방주에서 그리스도까지",
-"body": "방주는 하나님의 심판 가운데 준비된 유일한 구원의 길이었다.\n\n노아와 그의 가족이 방주 안으로 들어가 구원받은 것처럼, 죄인은 예수 그리스도 안에서 구원을 얻는다.\n\n노아홍수는 마지막 심판을 예고하며 동시에 그리스도를 통한 구원의 모형을 보여준다.\n\n방주는 구속사 속에서 예수 그리스도를 예표하는 중요한 그림이다.\n\n흐름: 노아홍수 → 방주 → 구원 → 그리스도 → 최후심판 → 새창조",
-"chips": [
-"방주",
-"구원",
-"그리스도",
-"최후심판",
-"새창조"
-]
-},
-"babelMeaning": {
-"title": "바벨탑 연결탐험",
-"meta": "질문 · 인간은 왜 하나님 없이 살려고 하는가?",
-"body": "홍수 이후 사람들은 하나가 되어 하나님께 순종하기보다 스스로 이름을 내고 흩어짐을 거부하였다.\n\n그들은 하늘에 닿는 탑을 쌓으며 하나님 없이 자신들의 힘으로 위대해지려 했다.\n\n하나님은 언어를 혼잡하게 하시고 사람들을 온 땅에 흩으셨다.\n\n바벨탑 사건은 인간의 교만과 자기중심성이 얼마나 깊은지를 보여주며, 하나님 없는 문명이 결국 한계를 가질 수밖에 없음을 보여준다.",
-"chips": [
-"교만",
-"자기중심",
-"반역",
-"흩어짐",
-"열방"
-]
-},
-"babelPanorama": {
-"title": "바벨탑 통합탐험",
-"meta": "바벨에서 열방의 구원까지",
-"body": "바벨탑 사건은 인류가 언어와 민족으로 흩어지는 출발점이 되었다.\n\n그러나 하나님은 흩어진 열방을 포기하지 않으셨다.\n\n바벨탑 직후 하나님은 아브라함을 부르시고 ‘모든 민족이 너로 말미암아 복을 얻을 것이다’라고 약속하셨다.\n\n바벨에서 시작된 흩어짐은 복음을 통해 다시 하나가 되는 방향으로 나아간다.\n\n오순절의 성령강림은 바벨의 혼잡을 거꾸로 뒤집는 사건이며, 마침내 모든 민족은 하나님의 나라에서 다시 모이게 된다.\n\n흐름: 바벨탑 → 열방의 흩어짐 → 아브라함의 부르심 → 복음의 확장 → 오순절 → 열방의 회복",
-"chips": [
-"바벨",
-"아브라함",
-"오순절",
-"열방회복"
-]
-},
-"abraham": {
-"title": "아브라함 소명",
-"meta": "창세기 12:1-3",
-"body": "바벨 이후 흩어진 열방 가운데 하나님은 아브라함을 부르시고, 그를 통해 땅의 모든 족속이 복을 얻게 하겠다고 약속하십니다.",
-"chips": [
-"다음 시대",
-"언약",
-"믿음의 여정",
-"족장시대"
-]
-},
-"creationHub": {
-"title": "창조 허브",
-"meta": "창조 · 형상 · 안식",
-"body": "천지창조, 하나님의 형상, 에덴동산, 안식의 의미를 묶어 성경 전체의 시작을 보여줍니다.",
-"chips": [
-"창조",
-"형상",
-"에덴",
-"안식"
-]
-},
-"fallHub": {
-"title": "타락 허브",
-"meta": "불순종 · 죄 · 추방",
-"body": "선악과 사건, 뱀의 유혹, 범죄, 에덴 추방을 중심으로 죄의 시작과 회복의 필요성을 탐험합니다.",
-"chips": [
-"선악과",
-"유혹",
-"죄",
-"추방"
-]
-},
-"covenantHub": {
-"title": "언약 허브",
-"meta": "여자의 후손 · 무지개 언약",
-"body": "타락 직후 주어진 여자의 후손 약속과 홍수 이후 무지개 언약을 중심으로, 심판 가운데 이어지는 하나님의 구속 약속을 보여줍니다.",
-"chips": [
-"여자의 후손",
-"가죽옷",
-"노아 언약",
-"무지개"
-]
-},
-"judgmentHub": {
-"title": "심판 허브",
-"meta": "가인 · 홍수 · 바벨",
-"body": "가인과 아벨, 노아홍수, 바벨탑을 연결하여 죄의 확산과 하나님의 공의를 보여줍니다.",
-"chips": [
-"가인",
-"홍수",
-"바벨탑",
-"공의"
-]
-},
-"nationsHub": {
-"title": "열방 허브",
-"meta": "흩어짐 · 회복",
-"body": "바벨의 흩어짐에서 아브라함의 부르심, 오순절, 세계선교로 이어지는 열방 회복의 흐름을 보여줍니다.",
-"chips": [
-"열국표",
-"아브라함",
-"오순절",
-"세계선교"
-]
-},
-"patriarch": {
-"title": "족장시대로",
-"meta": "다음 Matrix 예고",
-"body": "다음 시대는 아브라함, 이삭, 야곱, 요셉으로 이어지는 족장시대입니다. 바벨 이후 하나님은 한 사람을 부르셔서 열방을 향한 복의 통로로 삼으십니다.",
-"chips": [
-"아브라함",
-"이삭",
-"야곱",
-"요셉"
-]
-}
-};
-const RICH=JSON.parse("{\"creationMeaning\":{\"q\":\"왜 인간은 존귀한가?\",\"a\":\"인간은 하나님의 형상으로 창조되었다.\",\"meaning\":\"하나님은 인간을 우연한 존재가 아니라 하나님의 형상으로 지으셨다.\n\n인간은 하나님을 대신하여 세상을 돌보고 다스리는 청지기로 부름받았다.\n\n창조는 인간의 존엄성과 가치, 관계와 사명의 출발점이다.\",\"flow\":[\"창조\",\"하나님의 형상\",\"청지기 사명\",\"안식\"],\"think\":\"나는 나와 다른 사람을 하나님의 형상으로 존중하고 있는가?\"},\"creationPanorama\":{\"q\":\"창조는 성경 전체에서 어디에 위치하는가?\",\"a\":\"창조는 성경 전체 이야기의 시작점이다.\",\"meaning\":\"하나님은 완전한 세상을 창조하셨지만 죄로 인해 세상은 깨어졌다.\n\n그러나 하나님은 구원의 역사를 통해 창조를 회복하시며 마지막에는 새하늘과 새땅으로 완성하신다.\",\"flow\":[\"🌎 창조\",\"🍎 타락\",\"✝ 구속\",\"👑 새창조\"],\"think\":\"성경은 무너진 창조를 회복하시는 하나님의 이야기로 이어진다.\"},\"fallMeaning\":{\"q\":\"왜 구원이 필요한가?\",\"a\":\"죄는 하나님과 인간의 관계를 깨뜨렸다.\",\"meaning\":\"하나님은 인간에게 자유롭게 순종할 수 있는 선택을 주셨다.\n\n그러나 인간은 하나님의 말씀보다 자신의 판단을 더 신뢰하며 선악과를 먹었다.\n\n그 결과 죄와 죽음이 세상에 들어오고 하나님과의 관계가 끊어졌다.\",\"flow\":[\"타락\",\"죄와 죽음\",\"관계의 단절\",\"구원의 필요\"],\"think\":\"나는 하나님의 말씀보다 내 판단을 더 신뢰하고 있지 않은가?\"},\"fallPanorama\":{\"q\":\"타락은 성경 전체에서 어떤 문제를 시작하는가?\",\"a\":\"타락은 십자가가 필요한 이유를 보여준다.\",\"meaning\":\"타락은 성경 전체 문제의 시작점이다.\n\n인간은 스스로 죄의 문제를 해결할 수 없게 되었고 하나님은 여자의 후손을 통해 구원의 약속을 주셨다.\n\n예수 그리스도의 십자가는 창세기 3장에서 시작된 문제에 대한 하나님의 해답이다.\",\"flow\":[\"타락\",\"여자의 후손 약속\",\"언약\",\"메시아\",\"십자가\",\"회복\"],\"think\":\"창세기의 타락은 복음서의 십자가로 이어진다.\"},\"cainMeaning\":{\"q\":\"참된 예배는 무엇인가?\",\"a\":\"하나님은 제물보다 믿음의 마음을 보신다.\",\"meaning\":\"가인과 아벨은 모두 하나님께 제사를 드렸지만 하나님은 아벨의 제사를 받으셨다.\n\n문제는 제물의 종류보다 하나님을 향한 마음과 믿음에 있었다.\n\n가인은 분노와 시기를 다스리지 못했고 결국 동생 아벨을 죽였다.\",\"flow\":[\"예배\",\"믿음\",\"시기와 분노\",\"죄의 확산\"],\"think\":\"나는 하나님께 어떤 마음으로 예배드리고 있는가?\"},\"cainPanorama\":{\"q\":\"아벨의 죽음은 어디로 이어지는가?\",\"a\":\"아벨의 피는 그리스도의 보혈을 바라보게 한다.\",\"meaning\":\"아벨은 믿음으로 하나님께 제사를 드린 최초의 의인으로 소개된다.\n\n그는 죄 없는 자가 죄로 인해 죽임을 당한 첫 번째 인물이기도 하다.\n\n아벨의 피는 억울함을 외쳤지만 예수님의 피는 죄인을 위한 용서와 구원을 선포한다.\",\"flow\":[\"아벨\",\"의인의 고난\",\"선지자들\",\"예수 그리스도\",\"구원\"],\"think\":\"성경은 아벨의 죽음에서 끝나지 않고 더 의로운 분께로 시선을 이끈다.\"},\"floodMeaning\":{\"q\":\"왜 심판이 필요한가?\",\"a\":\"하나님은 죄를 그냥 지나치지 않으신다.\",\"meaning\":\"세상은 죄악으로 가득 차게 되었고 사람들은 하나님을 떠나 자신의 길을 따라 살아갔다.\n\n하나님은 홍수로 세상을 심판하셨지만 노아와 그의 가족은 방주를 통해 구원하셨다.\n\n노아홍수는 공의의 하나님이시며 동시에 구원의 길을 마련하시는 은혜의 하나님을 보여준다.\",\"flow\":[\"죄의 확산\",\"홍수 심판\",\"방주\",\"은혜의 구원\"],\"think\":\"하나님의 심판은 두려운 동시에 구원의 길을 보게 한다.\"},\"floodPanorama\":{\"q\":\"방주는 성경 전체에서 무엇을 가리키는가?\",\"a\":\"방주는 그리스도 안의 구원을 미리 보여준다.\",\"meaning\":\"방주는 하나님의 심판 가운데 준비된 유일한 구원의 길이었다.\n\n노아와 그의 가족이 방주 안에서 구원받은 것처럼 죄인은 예수 그리스도 안에서 구원을 얻는다.\n\n노아홍수는 마지막 심판을 예고하며 동시에 그리스도를 통한 구원의 모형을 보여준다.\",\"flow\":[\"노아홍수\",\"방주\",\"구원\",\"그리스도\",\"최후심판\",\"새창조\"],\"think\":\"심판의 이야기 안에도 하나님이 준비하신 구원의 길이 있다.\"},\"babelMeaning\":{\"q\":\"인간은 왜 하나님 없이 살려고 하는가?\",\"a\":\"교만은 하나님보다 자기 이름을 높이려 한다.\",\"meaning\":\"홍수 이후 사람들은 하나가 되어 하나님께 순종하기보다 스스로 이름을 내고 흩어짐을 거부하였다.\n\n그들은 하늘에 닿는 탑을 쌓으며 하나님 없이 자신들의 힘으로 위대해지려 했다.\n\n바벨탑은 인간의 교만과 자기중심성이 얼마나 깊은지를 보여준다.\",\"flow\":[\"교만\",\"자기 이름\",\"바벨탑\",\"흩어짐\"],\"think\":\"내가 하나님 없이 세우려는 바벨탑은 무엇인가?\"},\"babelPanorama\":{\"q\":\"바벨의 흩어짐은 어떻게 회복되는가?\",\"a\":\"흩어진 열방은 복음 안에서 다시 회복된다.\",\"meaning\":\"바벨탑 사건은 인류가 언어와 민족으로 흩어지는 출발점이 되었다.\n\n그러나 하나님은 흩어진 열방을 포기하지 않으셨다.\n\n바벨 직후 하나님은 아브라함을 부르시고 모든 민족이 복을 얻을 것이라고 약속하셨다. 오순절 성령강림은 바벨의 혼잡을 거꾸로 뒤집는 사건이다.\",\"flow\":[\"바벨탑\",\"열방의 흩어짐\",\"아브라함의 부르심\",\"복음의 확장\",\"오순절\",\"열방의 회복\"],\"think\":\"하나님은 흩어진 열방까지 회복하시는 분이다.\"}}");
+const DATA={"creation": {"title": "창조", "meta": "창세기 1:1", "body": "하나님이 천지를 창조하시고 세상의 질서와 생명을 세우신 시작입니다. 창조는 새창조와 새 예루살렘으로 이어지는 성경 전체의 출발점입니다.", "chips": ["천지창조", "하나님의 형상", "안식", "새창조"]}, "fall": {"title": "타락", "meta": "창세기 3:1-6", "body": "아담과 하와가 하나님의 명령을 어기며 죄와 죽음이 인간 역사 안으로 들어옵니다. 에덴에서의 추방은 회복을 향한 구속사의 시작이 됩니다.", "chips": ["선악과", "죄의 시작", "추방", "여자의 후손"]}, "cain": {"title": "가인과 아벨", "meta": "창세기 4:1-8", "body": "가인이 아벨을 시기하여 죽임으로 죄가 개인을 넘어 관계와 사회 안으로 확산됩니다. 심판과 긍휼이 함께 드러나는 장면입니다.", "chips": ["첫 살인", "죄의 확산", "놋 땅", "심판"]}, "flood": {"title": "노아홍수", "meta": "창세기 6:5-8:22", "body": "세상의 악함에 대한 하나님의 심판이 홍수로 임하지만, 하나님은 방주를 통해 노아와 가족을 보존하십니다. 방주는 항해선보다 구원을 위한 거대한 목재 구조물에 가깝습니다.", "chips": ["폭우", "홍수 심판", "방주", "새 시작"]}, "babel": {"title": "바벨탑", "meta": "창세기 11:1-9", "body": "사람들이 이름을 내고 흩어짐을 면하려고 탑을 쌓지만, 하나님은 언어를 혼잡하게 하시고 민족을 흩으십니다. 이후 하나님은 한 사람 아브라함을 부르십니다.", "chips": ["지구라트", "교만", "언어 혼잡", "열방 분산"]}, "abraham": {"title": "아브라함 소명", "meta": "창세기 12:1-3", "body": "바벨 이후 흩어진 열방 가운데 하나님은 아브라함을 부르시고, 그를 통해 땅의 모든 족속이 복을 얻게 하겠다고 약속하십니다.", "chips": ["다음 시대", "언약", "믿음의 여정", "족장시대"]}, "creationHub": {"title": "창조 허브", "meta": "창조 · 형상 · 안식", "body": "천지창조, 하나님의 형상, 에덴동산, 안식의 의미를 묶어 성경 전체의 시작을 보여줍니다.", "chips": ["창조", "형상", "에덴", "안식"]}, "fallHub": {"title": "타락 허브", "meta": "불순종 · 죄 · 추방", "body": "선악과 사건, 뱀의 유혹, 범죄, 에덴 추방을 중심으로 죄의 시작과 회복의 필요성을 탐험합니다.", "chips": ["선악과", "유혹", "죄", "추방"]}, "covenantHub": {"title": "언약 허브", "meta": "여자의 후손 · 무지개 언약", "body": "타락 직후 주어진 여자의 후손 약속과 홍수 이후 무지개 언약을 중심으로, 심판 가운데 이어지는 하나님의 구속 약속을 보여줍니다.", "chips": ["여자의 후손", "가죽옷", "노아 언약", "무지개"]}, "judgmentHub": {"title": "심판 허브", "meta": "가인 · 홍수 · 바벨", "body": "가인과 아벨, 노아홍수, 바벨탑을 연결하여 죄의 확산과 하나님의 공의를 보여줍니다.", "chips": ["가인", "홍수", "바벨탑", "공의"]}, "nationsHub": {"title": "열방 허브", "meta": "흩어짐 · 회복", "body": "바벨의 흩어짐에서 아브라함의 부르심, 오순절, 세계선교로 이어지는 열방 회복의 흐름을 보여줍니다.", "chips": ["열국표", "아브라함", "오순절", "세계선교"]}, "patriarch": {"title": "족장시대로", "meta": "다음 Matrix 예고", "body": "다음 시대는 아브라함, 이삭, 야곱, 요셉으로 이어지는 족장시대입니다. 바벨 이후 하나님은 한 사람을 부르셔서 열방을 향한 복의 통로로 삼으십니다.", "chips": ["아브라함", "이삭", "야곱", "요셉"]}};
+const EXPLORE={"creation": {"meaning": {"title": "창조 연결탐험", "meta": "Meaning · 왜 중요한가?", "question": "왜 인간은 존귀한가?", "answer": "인간은 하나님의 형상으로 창조되었다.", "meaning": "하나님은 말씀으로 세상을 창조하시고 인간을 하나님의 형상으로 지으셨다.\n\n인간은 우연히 생긴 존재가 아니라 하나님을 닮도록 창조된 존귀한 존재이다.\n\n창조는 생명, 관계, 사명, 안식의 출발점이며 인간이 세상을 다스리는 청지기로 부름받았음을 보여준다.", "flow": [["🌎", "창조", "하나님의 선한 시작"], ["👤", "하나님의 형상", "인간의 존엄과 사명"], ["🌿", "청지기", "세상을 돌보는 부르심"], ["🕊️", "안식", "하나님 안의 질서와 쉼"]], "think": "나는 나와 다른 사람을 하나님의 형상으로 존귀하게 바라보고 있는가?"}, "panorama": {"title": "창조 통합탐험", "meta": "Panorama · 성경 전체 흐름", "question": "창조는 성경 전체에서 어디에 위치하는가?", "answer": "창조는 새창조로 완성될 성경 이야기의 출발점이다.", "meaning": "성경은 창조로 시작하여 새하늘과 새땅으로 끝난다.\n\n하나님은 처음에 선한 세상을 창조하셨고, 죄로 깨어진 창조를 예수 그리스도 안에서 회복하신다.\n\n창조는 단순한 시작이 아니라 성경 전체가 향하는 회복과 완성의 기준점이다.", "flow": [["🌎", "창조", "완전한 시작"], ["🍎", "타락", "깨어진 창조"], ["✝️", "구속", "예수 그리스도의 회복"], ["👑", "새창조", "하나님 나라의 완성"]], "think": "성경 전체를 창조에서 새창조로 이어지는 하나의 이야기로 보고 있는가?"}}, "fall": {"meaning": {"title": "타락 연결탐험", "meta": "Meaning · 왜 중요한가?", "question": "왜 구원이 필요한가?", "answer": "죄는 하나님과 인간의 관계를 깨뜨렸다.", "meaning": "타락은 단순한 실수가 아니다.\n\n인간이 하나님의 말씀보다 자신의 판단을 더 신뢰하고 하나님을 떠난 사건이다.\n\n그 결과 죄와 죽음이 세상에 들어왔고, 하나님과 인간의 관계가 끊어졌다. 그래서 인간에게는 반드시 구원이 필요하다.", "flow": [["🍎", "타락", "죄의 시작"], ["🚪", "추방", "하나님과의 단절"], ["⚖️", "심판", "죄의 결과"], ["✝️", "십자가", "구원의 필요"]], "think": "나는 하나님의 말씀보다 내 판단을 더 신뢰하고 있지 않은가?"}, "panorama": {"title": "타락 통합탐험", "meta": "Panorama · 성경 전체 흐름", "question": "타락은 성경 전체에서 어디로 이어지는가?", "answer": "타락은 십자가와 회복을 향한 구속사의 출발점이다.", "meaning": "타락으로 인해 인간은 스스로 죄 문제를 해결할 수 없게 되었다.\n\n그러나 하나님은 여자의 후손 약속을 통해 구원의 길을 예고하셨다.\n\n성경의 구속 역사는 타락으로 시작된 죄와 죽음의 문제를 예수 그리스도 안에서 해결해 가는 이야기이다.", "flow": [["🍎", "타락", "죄와 죽음의 시작"], ["🌱", "여자의 후손", "구원의 약속"], ["📜", "언약", "구속사의 진행"], ["✝️", "십자가", "죄 문제의 해결"], ["👑", "회복", "새창조의 완성"]], "think": "예수님의 십자가가 왜 나에게 필요한지 알고 있는가?"}}, "cain": {"meaning": {"title": "가인과 아벨 연결탐험", "meta": "Meaning · 왜 중요한가?", "question": "참된 예배는 무엇인가?", "answer": "하나님은 겉모습보다 믿음과 마음을 보신다.", "meaning": "가인과 아벨은 모두 하나님께 제사를 드렸지만 하나님은 아벨의 제사를 받으셨다.\n\n핵심은 제물의 종류보다 하나님을 향한 믿음과 태도였다.\n\n가인은 분노와 시기를 다스리지 못했고 결국 동생을 죽였다. 이 사건은 죄가 마음에서 자라 관계를 파괴하는 모습을 보여준다.", "flow": [["🔥", "제사", "하나님께 나아감"], ["🤍", "믿음", "아벨의 예배"], ["😡", "시기와 분노", "가인의 마음"], ["🩸", "살인", "죄의 확산"]], "think": "나는 하나님께 어떤 마음으로 예배하고 있는가?"}, "panorama": {"title": "가인과 아벨 통합탐험", "meta": "Panorama · 성경 전체 흐름", "question": "아벨의 죽음은 성경 전체에서 어떤 의미가 있는가?", "answer": "아벨은 의인의 고난을 보여주며 그리스도께 시선을 이끈다.", "meaning": "아벨은 믿음으로 하나님께 제사를 드린 의인으로 소개된다.\n\n그는 죄로 인해 죽임당한 첫 의인의 모습이며, 성경은 이 흐름을 선지자들의 고난과 예수 그리스도의 십자가로 연결한다.\n\n아벨의 피가 억울함을 외쳤다면 예수님의 피는 죄인을 위한 용서와 구원을 선포한다.", "flow": [["🩸", "아벨", "의인의 죽음"], ["📢", "선지자들", "거절받은 말씀"], ["✝️", "그리스도", "의로운 고난"], ["🕊️", "용서", "더 나은 피의 선포"]], "think": "나는 믿음 때문에 불편함을 감수할 준비가 되어 있는가?"}}, "flood": {"meaning": {"title": "노아홍수 연결탐험", "meta": "Meaning · 왜 중요한가?", "question": "왜 심판이 필요한가?", "answer": "하나님은 죄를 그냥 지나치지 않으시지만 구원의 길도 마련하신다.", "meaning": "세상은 죄악으로 가득 차게 되었고 하나님은 홍수로 세상을 심판하셨다.\n\n그러나 하나님은 노아와 그의 가족을 방주를 통해 구원하셨다.\n\n노아홍수는 하나님의 공의와 은혜를 함께 보여준다. 죄에 대한 심판은 실제이지만, 하나님은 심판 가운데서도 구원의 길을 준비하신다.", "flow": [["🌧️", "홍수", "죄에 대한 심판"], ["🛶", "방주", "준비된 구원의 길"], ["🌈", "언약", "다시 시작하게 하심"], ["🕊️", "은혜", "심판 속의 보존"]], "think": "나는 하나님의 공의와 은혜를 함께 기억하고 있는가?"}, "panorama": {"title": "노아홍수 통합탐험", "meta": "Panorama · 성경 전체 흐름", "question": "방주는 성경 전체에서 무엇을 가리키는가?", "answer": "방주는 심판 가운데 준비된 구원의 길을 보여준다.", "meaning": "방주는 하나님의 심판 가운데 준비된 유일한 구원의 길이었다.\n\n노아가 방주 안에서 구원받은 것처럼 죄인은 예수 그리스도 안에서 구원을 얻는다.\n\n노아홍수는 마지막 심판을 예고하면서 동시에 그리스도를 통한 구원의 그림을 보여준다.", "flow": [["🌧️", "홍수 심판", "죄에 대한 공의"], ["🛶", "방주", "구원의 피난처"], ["✝️", "그리스도", "참된 구원의 길"], ["👑", "최후 심판", "새창조로 이어짐"]], "think": "나는 하나님이 마련하신 구원의 길 안에 머물고 있는가?"}}, "babel": {"meaning": {"title": "바벨탑 연결탐험", "meta": "Meaning · 왜 중요한가?", "question": "인간은 왜 하나님 없이 살려고 하는가?", "answer": "죄인은 하나님의 이름보다 자신의 이름을 높이려 한다.", "meaning": "홍수 이후 사람들은 하나님께 순종하기보다 스스로 이름을 내고 흩어짐을 거부하였다.\n\n바벨탑은 인간이 하나님 없이 자신의 힘으로 높아지려 한 사건이다.\n\n하나님은 언어를 혼잡하게 하시고 사람들을 온 땅에 흩으셨다. 바벨탑은 하나님 없는 문명이 결국 한계를 가질 수밖에 없음을 보여준다.", "flow": [["🏗️", "바벨탑", "인간의 이름"], ["💬", "언어 혼잡", "소통의 무너짐"], ["🌍", "흩어짐", "열방의 시작"], ["📜", "아브라함", "회복을 위한 부르심"]], "think": "내가 하나님보다 더 높이고 싶은 이름은 무엇인가?"}, "panorama": {"title": "바벨탑 통합탐험", "meta": "Panorama · 성경 전체 흐름", "question": "바벨의 흩어짐은 어떻게 회복되는가?", "answer": "하나님은 흩어진 열방을 복음 안에서 다시 부르신다.", "meaning": "바벨탑 사건은 인류가 언어와 민족으로 흩어지는 출발점이 되었다.\n\n그러나 하나님은 흩어진 열방을 포기하지 않으시고 아브라함을 부르셔서 모든 민족이 복을 얻게 하겠다고 약속하셨다.\n\n바벨의 혼잡은 오순절 성령강림과 복음 전파를 통해 열방 회복의 방향으로 나아간다.", "flow": [["🏗️", "바벨", "열방의 흩어짐"], ["👣", "아브라함", "복의 통로"], ["🔥", "오순절", "언어를 넘어선 복음"], ["🌍", "세계선교", "열방의 회복"], ["👑", "하나님 나라", "모든 민족의 예배"]], "think": "나는 흩어진 열방을 향한 하나님의 마음을 품고 있는가?"}}};
+
 const sheet=document.getElementById('sheet'),backdrop=document.getElementById('backdrop'),title=document.getElementById('sheetTitle'),meta=document.getElementById('sheetMeta'),body=document.getElementById('sheetBody'),chips=document.getElementById('chips'),toast=document.getElementById('toast');
-function esc(x){return String(x||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
-function renderRich(key,d){const r=RICH[key];if(!r){return `<div class="exploreCard"><div class="cardText">${esc(d.body).replace(/\n/g,'<br>')}</div></div>`;}const isPan=key.toLowerCase().includes('panorama');const flow=(r.flow||[]).map((f,i)=>`<div class="flowItem"><div class="flowIcon">${isPan?'↗':'●'}</div><div class="flowText">${esc(f)}</div></div>${i<(r.flow.length-1)?'<div class="flowArrow">↓</div>':''}`).join('');return `
-<div class="exploreCard hero"><div class="cardLabel">❓ 핵심질문</div><div class="cardMain">${esc(r.q)}</div></div>
-<div class="exploreCard"><div class="cardLabel">💡 한 줄 핵심</div><div class="cardAnswer">${esc(r.a)}</div></div>
-<div class="exploreCard"><div class="cardLabel">📖 ${isPan?'구속사 의미':'사건의 의미'}</div><div class="cardText">${esc(r.meaning).replace(/\n/g,'<br>')}</div></div>
-<div class="exploreCard"><div class="cardLabel">🔗 ${isPan?'성경 전체 흐름':'연결 흐름'}</div><div class="flowBox">${flow}</div></div>
-<div class="exploreCard"><div class="cardLabel">🤔 생각해보기</div><div class="cardText">${esc(r.think)}</div></div>`;}
-function openSheet(key){const d=DATA[key]||DATA.creationHub;title.textContent=d.title;meta.textContent=d.meta;body.innerHTML=renderRich(key,d);chips.innerHTML=(d.chips||[]).map(c=>`<span class="chip">${esc(c)}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const key=el.dataset.key;if(key==='patriarch'){location.href='https://centiger.github.io/CEN-M02-Patriarch/';return;}if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showToast(b.textContent.trim()+' 보기');}));function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
+function esc(s){return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+function flowHtml(items){return '<div class="flow">'+(items||[]).map((it,i)=>'<div class="flowItem"><div class="flowIcon">'+esc(it[0])+'</div><div class="flowText"><b>'+esc(it[1])+'</b><small>'+esc(it[2])+'</small></div></div>'+ (i<(items.length-1)?'<div class="arrow">↓</div>':'')).join('')+'</div>';}
+function openExplore(key,type){const d=(EXPLORE[key]&&EXPLORE[key][type])||null;if(!d){openSheet(key);return;}title.textContent=d.title;meta.textContent=d.meta;body.innerHTML='<div class="explore">'+'<div class="exploreCard"><span class="label">❓ 핵심질문</span><div class="main">'+esc(d.question)+'</div></div>'+'<div class="exploreCard answer"><span class="label">💡 한 줄 핵심</span><div class="main">'+esc(d.answer)+'</div></div>'+'<div class="exploreCard"><span class="label">📖 '+(type==='panorama'?'구속사 의미':'사건의 의미')+'</span><div class="text">'+esc(d.meaning)+'</div></div>'+'<div class="exploreCard"><span class="label">🔗 '+(type==='panorama'?'성경 전체 흐름':'연결 흐름')+'</span>'+flowHtml(d.flow)+'</div>'+'<div class="exploreCard"><span class="label">🤔 생각해보기</span><div class="text">'+esc(d.think)+'</div></div>'+'</div>';chips.innerHTML='';sheet.classList.add('show');backdrop.classList.add('show');}
+function openSheet(key){const d=DATA[key]||DATA.creation;title.textContent=d.title;meta.textContent=d.meta;body.textContent=d.body;chips.innerHTML=d.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}
+function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}
+const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};
+document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;const type=el.dataset.type;if(type==='meaning'||type==='panorama'){openExplore(key,type);return;}if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));
+document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);
+function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
 </script>
 
 </body>
