@@ -24,19 +24,19 @@ body{display:flex;justify-content:center}
 /* 기준 이미지 865×1819 기준으로 % 좌표화. 배경 텍스트 제거 전에도 겹침이 덜 보이도록 텍스트 뒤에만 얇은 스크림을 둔다. */
 .scrim{position:absolute;left:15.5%;width:43%;height:8.7%;border-radius:14px;background:linear-gradient(90deg,rgba(4,8,13,.46),rgba(4,8,13,.24),rgba(4,8,13,0));filter:blur(.2px);z-index:2;pointer-events:none}
 .s1{top:7.15%}.s2{top:19.4%}.s3{top:32.8%}.s4{top:45.85%}.s5{top:59.2%}.s6{top:72.15%;height:7.8%}
-.titleLayer{position:absolute;z-index:5;pointer-events:none;left:50%;top:1.55%;transform:translateX(-50%);width:52%;text-align:center;line-height:1;text-shadow:0 3px 12px rgba(0,0,0,.95)}
+.titleLayer{position:absolute;z-index:5;left:50%;top:1.55%;transform:translateX(-50%);width:52%;text-align:center;line-height:1;text-shadow:0 3px 12px rgba(0,0,0,.95)}
 .titleLayer h1{margin:0;font-size:clamp(24px,6.2vw,42px);letter-spacing:.16em;color:#f6dfaa;font-weight:800}.titleLayer p{margin:7px 0 0;font-size:clamp(8.5px,1.9vw,12px);letter-spacing:.18em;color:#dfc284;font-weight:650}
-.eventTitle{position:absolute;z-index:6;pointer-events:none;left:18.0%;width:44%;line-height:1.04;text-shadow:0 3px 8px rgba(0,0,0,.95),0 0 18px rgba(0,0,0,.82)}
+.eventTitle{position:absolute;z-index:6;left:18.0%;width:44%;line-height:1.04;text-shadow:0 3px 8px rgba(0,0,0,.95),0 0 18px rgba(0,0,0,.82)}
 .eventTitle h2{margin:0;color:var(--white);font-size:clamp(11px,2.75vw,18px);font-weight:600;letter-spacing:-.055em;white-space:nowrap}.eventTitle .desc{margin:.32em 0 0;color:#ffe28a;font-size:clamp(7.8px,1.75vw,10.5px);font-weight:700;line-height:1.28;letter-spacing:-.05em;word-break:keep-all;overflow-wrap:normal}.eventTitle .ref{margin:.42em 0 0;color:#fff;font-size:clamp(7.4px,1.55vw,9.2px);font-weight:650;opacity:.95}
 .t1{top:7.35%}.t2{top:19.95%}.t3{top:33.3%}.t4{top:46.4%}.t5{top:59.8%}.t6{top:72.8%}
 /* 버튼은 각 사건 박스의 상단~2/3 지점 사이, 같은 X축 기준으로 정렬 */
-.btnRow{position:absolute;z-index:7;left:51.2%;width:44.4%;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1.4%;height:3.35%;line-height:1}
+.btnRow{position:absolute;z-index:20;left:51.2%;width:44.4%;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1.4%;height:3.35%;line-height:1}
 .r1{top:13.65%}.r2{top:24.6%}.r3{top:35.85%}.r4{top:52.9%}.r5{top:66.55%}
 .matrixBtn{border:1px solid rgba(247,216,137,.52);border-radius:12px;background:linear-gradient(180deg,rgba(18,21,24,.84),rgba(5,8,12,.82));box-shadow:0 6px 16px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(5px);color:#f7ead0;font-size:clamp(8px,1.85vw,10.5px);font-weight:850;text-shadow:0 1px 2px rgba(0,0,0,.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;line-height:1.02;padding:0 2px;cursor:pointer;min-width:0;white-space:normal;text-align:center;word-break:keep-all;overflow-wrap:normal}.matrixBtn .ico{font-size:1.22em;color:var(--gold);line-height:1}.matrixBtn.judgment{border-color:rgba(235,132,171,.75);background:linear-gradient(180deg,rgba(64,33,49,.86),rgba(18,10,17,.82))}.matrixBtn.covenant{border-color:rgba(208,155,255,.72);background:linear-gradient(180deg,rgba(51,36,75,.85),rgba(14,10,24,.83))}.matrixBtn.nations{border-color:rgba(245,185,81,.75);background:linear-gradient(180deg,rgba(83,55,18,.86),rgba(22,14,6,.82))}
 /* 6번은 사건이 아니라 다음 시대 입구로 보이게 상징 오른쪽 아래로 분리 */
-.nextBtn{position:absolute;z-index:8;left:18.0%;top:78.9%;height:3.3%;min-width:22%;padding:0 4%;border:1px solid rgba(208,155,255,.66);border-radius:999px;background:linear-gradient(180deg,rgba(72,47,101,.86),rgba(25,14,43,.88));color:#f3e8ff;font-size:clamp(10px,2.45vw,15px);font-weight:850;box-shadow:0 7px 18px rgba(0,0,0,.4);text-shadow:0 1px 3px rgba(0,0,0,.75);cursor:pointer}
+.nextBtn{position:absolute;z-index:20;left:18.0%;top:78.9%;height:3.3%;min-width:22%;padding:0 4%;border:1px solid rgba(208,155,255,.66);border-radius:999px;background:linear-gradient(180deg,rgba(72,47,101,.86),rgba(25,14,43,.88));color:#f3e8ff;font-size:clamp(10px,2.45vw,15px);font-weight:850;box-shadow:0 7px 18px rgba(0,0,0,.4);text-shadow:0 1px 3px rgba(0,0,0,.75);cursor:pointer}
 .hot{position:absolute;z-index:6;border:0;background:transparent;cursor:pointer;border-radius:18px}.hot:focus-visible{outline:2px solid var(--gold);background:rgba(247,216,137,.11)}
-.e{left:0;width:100%;height:13.6%}.e1{top:7.2%}.e2{top:20.8%}.e3{top:34.2%}.e4{top:47.4%}.e5{top:60.7%}.e6{top:73.9%;height:12.8%}
+.e{left:0;width:50%;height:13.6%}.e1{top:7.2%}.e2{top:20.8%}.e3{top:34.2%}.e4{top:47.4%}.e5{top:60.7%}.e6{top:73.9%;height:12.8%}
 .bottomDock{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:560px;z-index:30;padding:5px 10px calc(7px + env(safe-area-inset-bottom));background:linear-gradient(to top,rgba(4,8,12,.98),rgba(9,18,26,.92));border-top:1px solid rgba(247,216,137,.24);box-shadow:0 -10px 24px rgba(0,0,0,.42);backdrop-filter:blur(16px)}
 .coreFlow{margin:0 0 4px;text-align:center;color:#f7d889;font-weight:900;line-height:1.18;font-size:clamp(10px,2.65vw,14px);letter-spacing:-.055em;text-shadow:0 2px 6px rgba(0,0,0,.85)}
 .coreFlow small{display:block;margin-bottom:1px;color:#d7b565;font-size:clamp(7px,1.9vw,10px);font-weight:800;letter-spacing:-.03em;opacity:.95}
@@ -276,56 +276,7 @@ const DATA={
 ]
 }
 };
-const RICH={
-creationMeaning:{q:'왜 인간은 존귀한가?',a:'인간은 하나님의 형상으로 창조되었다.',meaning:'하나님은 인간을 우연한 존재가 아니라 하나님의 형상으로 지으셨다.
-
-인간은 하나님을 대신하여 세상을 돌보고 다스리는 청지기로 부름받았다.
-
-창조는 인간의 존엄성과 가치, 관계와 사명의 출발점이다.',flow:['창조','하나님의 형상','청지기 사명','안식'],think:'나는 나와 다른 사람을 하나님의 형상으로 존중하고 있는가?'},
-creationPanorama:{q:'창조는 성경 전체에서 어디에 위치하는가?',a:'창조는 성경 전체 이야기의 시작점이다.',meaning:'하나님은 완전한 세상을 창조하셨지만 죄로 인해 세상은 깨어졌다.
-
-그러나 하나님은 구원의 역사를 통해 창조를 회복하시며 마지막에는 새하늘과 새땅으로 완성하신다.',flow:['🌎 창조','🍎 타락','✝ 구속','👑 새창조'],think:'성경은 무너진 창조를 회복하시는 하나님의 이야기로 이어진다.'},
-fallMeaning:{q:'왜 구원이 필요한가?',a:'죄는 하나님과 인간의 관계를 깨뜨렸다.',meaning:'하나님은 인간에게 자유롭게 순종할 수 있는 선택을 주셨다.
-
-그러나 인간은 하나님의 말씀보다 자신의 판단을 더 신뢰하며 선악과를 먹었다.
-
-그 결과 죄와 죽음이 세상에 들어오고 하나님과의 관계가 끊어졌다.',flow:['타락','죄와 죽음','관계의 단절','구원의 필요'],think:'나는 하나님의 말씀보다 내 판단을 더 신뢰하고 있지 않은가?'},
-fallPanorama:{q:'타락은 성경 전체에서 어떤 문제를 시작하는가?',a:'타락은 십자가가 필요한 이유를 보여준다.',meaning:'타락은 성경 전체 문제의 시작점이다.
-
-인간은 스스로 죄의 문제를 해결할 수 없게 되었고 하나님은 여자의 후손을 통해 구원의 약속을 주셨다.
-
-예수 그리스도의 십자가는 창세기 3장에서 시작된 문제에 대한 하나님의 해답이다.',flow:['타락','여자의 후손 약속','언약','메시아','십자가','회복'],think:'창세기의 타락은 복음서의 십자가로 이어진다.'},
-cainMeaning:{q:'참된 예배는 무엇인가?',a:'하나님은 제물보다 믿음의 마음을 보신다.',meaning:'가인과 아벨은 모두 하나님께 제사를 드렸지만 하나님은 아벨의 제사를 받으셨다.
-
-문제는 제물의 종류보다 하나님을 향한 마음과 믿음에 있었다.
-
-가인은 분노와 시기를 다스리지 못했고 결국 동생 아벨을 죽였다.',flow:['예배','믿음','시기와 분노','죄의 확산'],think:'나는 하나님께 어떤 마음으로 예배드리고 있는가?'},
-cainPanorama:{q:'아벨의 죽음은 어디로 이어지는가?',a:'아벨의 피는 그리스도의 보혈을 바라보게 한다.',meaning:'아벨은 믿음으로 하나님께 제사를 드린 최초의 의인으로 소개된다.
-
-그는 죄 없는 자가 죄로 인해 죽임을 당한 첫 번째 인물이기도 하다.
-
-아벨의 피는 억울함을 외쳤지만 예수님의 피는 죄인을 위한 용서와 구원을 선포한다.',flow:['아벨','의인의 고난','선지자들','예수 그리스도','구원'],think:'성경은 아벨의 죽음에서 끝나지 않고 더 의로운 분께로 시선을 이끈다.'},
-floodMeaning:{q:'왜 심판이 필요한가?',a:'하나님은 죄를 그냥 지나치지 않으신다.',meaning:'세상은 죄악으로 가득 차게 되었고 사람들은 하나님을 떠나 자신의 길을 따라 살아갔다.
-
-하나님은 홍수로 세상을 심판하셨지만 노아와 그의 가족은 방주를 통해 구원하셨다.
-
-노아홍수는 공의의 하나님이시며 동시에 구원의 길을 마련하시는 은혜의 하나님을 보여준다.',flow:['죄의 확산','홍수 심판','방주','은혜의 구원'],think:'하나님의 심판은 두려운 동시에 구원의 길을 보게 한다.'},
-floodPanorama:{q:'방주는 성경 전체에서 무엇을 가리키는가?',a:'방주는 그리스도 안의 구원을 미리 보여준다.',meaning:'방주는 하나님의 심판 가운데 준비된 유일한 구원의 길이었다.
-
-노아와 그의 가족이 방주 안에서 구원받은 것처럼 죄인은 예수 그리스도 안에서 구원을 얻는다.
-
-노아홍수는 마지막 심판을 예고하며 동시에 그리스도를 통한 구원의 모형을 보여준다.',flow:['노아홍수','방주','구원','그리스도','최후심판','새창조'],think:'심판의 이야기 안에도 하나님이 준비하신 구원의 길이 있다.'},
-babelMeaning:{q:'인간은 왜 하나님 없이 살려고 하는가?',a:'교만은 하나님보다 자기 이름을 높이려 한다.',meaning:'홍수 이후 사람들은 하나가 되어 하나님께 순종하기보다 스스로 이름을 내고 흩어짐을 거부하였다.
-
-그들은 하늘에 닿는 탑을 쌓으며 하나님 없이 자신들의 힘으로 위대해지려 했다.
-
-바벨탑은 인간의 교만과 자기중심성이 얼마나 깊은지를 보여준다.',flow:['교만','자기 이름','바벨탑','흩어짐'],think:'내가 하나님 없이 세우려는 바벨탑은 무엇인가?'},
-babelPanorama:{q:'바벨의 흩어짐은 어떻게 회복되는가?',a:'흩어진 열방은 복음 안에서 다시 회복된다.',meaning:'바벨탑 사건은 인류가 언어와 민족으로 흩어지는 출발점이 되었다.
-
-그러나 하나님은 흩어진 열방을 포기하지 않으셨다.
-
-바벨 직후 하나님은 아브라함을 부르시고 모든 민족이 복을 얻을 것이라고 약속하셨다. 오순절 성령강림은 바벨의 혼잡을 거꾸로 뒤집는 사건이다.',flow:['바벨탑','열방의 흩어짐','아브라함의 부르심','복음의 확장','오순절','열방의 회복'],think:'하나님은 흩어진 열방까지 회복하시는 분이다.'}
-};
+const RICH=JSON.parse("{\"creationMeaning\":{\"q\":\"왜 인간은 존귀한가?\",\"a\":\"인간은 하나님의 형상으로 창조되었다.\",\"meaning\":\"하나님은 인간을 우연한 존재가 아니라 하나님의 형상으로 지으셨다.\n\n인간은 하나님을 대신하여 세상을 돌보고 다스리는 청지기로 부름받았다.\n\n창조는 인간의 존엄성과 가치, 관계와 사명의 출발점이다.\",\"flow\":[\"창조\",\"하나님의 형상\",\"청지기 사명\",\"안식\"],\"think\":\"나는 나와 다른 사람을 하나님의 형상으로 존중하고 있는가?\"},\"creationPanorama\":{\"q\":\"창조는 성경 전체에서 어디에 위치하는가?\",\"a\":\"창조는 성경 전체 이야기의 시작점이다.\",\"meaning\":\"하나님은 완전한 세상을 창조하셨지만 죄로 인해 세상은 깨어졌다.\n\n그러나 하나님은 구원의 역사를 통해 창조를 회복하시며 마지막에는 새하늘과 새땅으로 완성하신다.\",\"flow\":[\"🌎 창조\",\"🍎 타락\",\"✝ 구속\",\"👑 새창조\"],\"think\":\"성경은 무너진 창조를 회복하시는 하나님의 이야기로 이어진다.\"},\"fallMeaning\":{\"q\":\"왜 구원이 필요한가?\",\"a\":\"죄는 하나님과 인간의 관계를 깨뜨렸다.\",\"meaning\":\"하나님은 인간에게 자유롭게 순종할 수 있는 선택을 주셨다.\n\n그러나 인간은 하나님의 말씀보다 자신의 판단을 더 신뢰하며 선악과를 먹었다.\n\n그 결과 죄와 죽음이 세상에 들어오고 하나님과의 관계가 끊어졌다.\",\"flow\":[\"타락\",\"죄와 죽음\",\"관계의 단절\",\"구원의 필요\"],\"think\":\"나는 하나님의 말씀보다 내 판단을 더 신뢰하고 있지 않은가?\"},\"fallPanorama\":{\"q\":\"타락은 성경 전체에서 어떤 문제를 시작하는가?\",\"a\":\"타락은 십자가가 필요한 이유를 보여준다.\",\"meaning\":\"타락은 성경 전체 문제의 시작점이다.\n\n인간은 스스로 죄의 문제를 해결할 수 없게 되었고 하나님은 여자의 후손을 통해 구원의 약속을 주셨다.\n\n예수 그리스도의 십자가는 창세기 3장에서 시작된 문제에 대한 하나님의 해답이다.\",\"flow\":[\"타락\",\"여자의 후손 약속\",\"언약\",\"메시아\",\"십자가\",\"회복\"],\"think\":\"창세기의 타락은 복음서의 십자가로 이어진다.\"},\"cainMeaning\":{\"q\":\"참된 예배는 무엇인가?\",\"a\":\"하나님은 제물보다 믿음의 마음을 보신다.\",\"meaning\":\"가인과 아벨은 모두 하나님께 제사를 드렸지만 하나님은 아벨의 제사를 받으셨다.\n\n문제는 제물의 종류보다 하나님을 향한 마음과 믿음에 있었다.\n\n가인은 분노와 시기를 다스리지 못했고 결국 동생 아벨을 죽였다.\",\"flow\":[\"예배\",\"믿음\",\"시기와 분노\",\"죄의 확산\"],\"think\":\"나는 하나님께 어떤 마음으로 예배드리고 있는가?\"},\"cainPanorama\":{\"q\":\"아벨의 죽음은 어디로 이어지는가?\",\"a\":\"아벨의 피는 그리스도의 보혈을 바라보게 한다.\",\"meaning\":\"아벨은 믿음으로 하나님께 제사를 드린 최초의 의인으로 소개된다.\n\n그는 죄 없는 자가 죄로 인해 죽임을 당한 첫 번째 인물이기도 하다.\n\n아벨의 피는 억울함을 외쳤지만 예수님의 피는 죄인을 위한 용서와 구원을 선포한다.\",\"flow\":[\"아벨\",\"의인의 고난\",\"선지자들\",\"예수 그리스도\",\"구원\"],\"think\":\"성경은 아벨의 죽음에서 끝나지 않고 더 의로운 분께로 시선을 이끈다.\"},\"floodMeaning\":{\"q\":\"왜 심판이 필요한가?\",\"a\":\"하나님은 죄를 그냥 지나치지 않으신다.\",\"meaning\":\"세상은 죄악으로 가득 차게 되었고 사람들은 하나님을 떠나 자신의 길을 따라 살아갔다.\n\n하나님은 홍수로 세상을 심판하셨지만 노아와 그의 가족은 방주를 통해 구원하셨다.\n\n노아홍수는 공의의 하나님이시며 동시에 구원의 길을 마련하시는 은혜의 하나님을 보여준다.\",\"flow\":[\"죄의 확산\",\"홍수 심판\",\"방주\",\"은혜의 구원\"],\"think\":\"하나님의 심판은 두려운 동시에 구원의 길을 보게 한다.\"},\"floodPanorama\":{\"q\":\"방주는 성경 전체에서 무엇을 가리키는가?\",\"a\":\"방주는 그리스도 안의 구원을 미리 보여준다.\",\"meaning\":\"방주는 하나님의 심판 가운데 준비된 유일한 구원의 길이었다.\n\n노아와 그의 가족이 방주 안에서 구원받은 것처럼 죄인은 예수 그리스도 안에서 구원을 얻는다.\n\n노아홍수는 마지막 심판을 예고하며 동시에 그리스도를 통한 구원의 모형을 보여준다.\",\"flow\":[\"노아홍수\",\"방주\",\"구원\",\"그리스도\",\"최후심판\",\"새창조\"],\"think\":\"심판의 이야기 안에도 하나님이 준비하신 구원의 길이 있다.\"},\"babelMeaning\":{\"q\":\"인간은 왜 하나님 없이 살려고 하는가?\",\"a\":\"교만은 하나님보다 자기 이름을 높이려 한다.\",\"meaning\":\"홍수 이후 사람들은 하나가 되어 하나님께 순종하기보다 스스로 이름을 내고 흩어짐을 거부하였다.\n\n그들은 하늘에 닿는 탑을 쌓으며 하나님 없이 자신들의 힘으로 위대해지려 했다.\n\n바벨탑은 인간의 교만과 자기중심성이 얼마나 깊은지를 보여준다.\",\"flow\":[\"교만\",\"자기 이름\",\"바벨탑\",\"흩어짐\"],\"think\":\"내가 하나님 없이 세우려는 바벨탑은 무엇인가?\"},\"babelPanorama\":{\"q\":\"바벨의 흩어짐은 어떻게 회복되는가?\",\"a\":\"흩어진 열방은 복음 안에서 다시 회복된다.\",\"meaning\":\"바벨탑 사건은 인류가 언어와 민족으로 흩어지는 출발점이 되었다.\n\n그러나 하나님은 흩어진 열방을 포기하지 않으셨다.\n\n바벨 직후 하나님은 아브라함을 부르시고 모든 민족이 복을 얻을 것이라고 약속하셨다. 오순절 성령강림은 바벨의 혼잡을 거꾸로 뒤집는 사건이다.\",\"flow\":[\"바벨탑\",\"열방의 흩어짐\",\"아브라함의 부르심\",\"복음의 확장\",\"오순절\",\"열방의 회복\"],\"think\":\"하나님은 흩어진 열방까지 회복하시는 분이다.\"}}");
 const sheet=document.getElementById('sheet'),backdrop=document.getElementById('backdrop'),title=document.getElementById('sheetTitle'),meta=document.getElementById('sheetMeta'),body=document.getElementById('sheetBody'),chips=document.getElementById('chips'),toast=document.getElementById('toast');
 function esc(x){return String(x||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
 function renderRich(key,d){const r=RICH[key];if(!r){return `<div class="exploreCard"><div class="cardText">${esc(d.body).replace(/\n/g,'<br>')}</div></div>`;}const isPan=key.toLowerCase().includes('panorama');const flow=(r.flow||[]).map((f,i)=>`<div class="flowItem"><div class="flowIcon">${isPan?'↗':'●'}</div><div class="flowText">${esc(f)}</div></div>${i<(r.flow.length-1)?'<div class="flowArrow">↓</div>':''}`).join('');return `
@@ -334,7 +285,7 @@ function renderRich(key,d){const r=RICH[key];if(!r){return `<div class="exploreC
 <div class="exploreCard"><div class="cardLabel">📖 ${isPan?'구속사 의미':'사건의 의미'}</div><div class="cardText">${esc(r.meaning).replace(/\n/g,'<br>')}</div></div>
 <div class="exploreCard"><div class="cardLabel">🔗 ${isPan?'성경 전체 흐름':'연결 흐름'}</div><div class="flowBox">${flow}</div></div>
 <div class="exploreCard"><div class="cardLabel">🤔 생각해보기</div><div class="cardText">${esc(r.think)}</div></div>`;}
-function openSheet(key){const d=DATA[key]||DATA.creationHub;title.textContent=d.title;meta.textContent=d.meta;body.innerHTML=renderRich(key,d);chips.innerHTML=(d.chips||[]).map(c=>`<span class="chip">${esc(c)}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};const PAGE_ROUTES={patriarch:'https://centiger.github.io/CEN-M02-Patriarch/'};document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}if(PAGE_ROUTES[key]){location.href=PAGE_ROUTES[key];return;}openSheet(key)}));document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showToast(b.textContent.trim()+' 보기');}));function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
+function openSheet(key){const d=DATA[key]||DATA.creationHub;title.textContent=d.title;meta.textContent=d.meta;body.innerHTML=renderRich(key,d);chips.innerHTML=(d.chips||[]).map(c=>`<span class="chip">${esc(c)}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const key=el.dataset.key;if(key==='patriarch'){location.href='https://centiger.github.io/CEN-M02-Patriarch/';return;}if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showToast(b.textContent.trim()+' 보기');}));function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
 </script>
 
 </body>
