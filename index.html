@@ -43,7 +43,7 @@ body{display:flex;justify-content:center}
 .nav{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
 .nav a{min-height:34px;border:1.2px solid rgba(247,216,137,.42);border-radius:10px;background:linear-gradient(180deg,rgba(18,28,36,.92),rgba(8,15,22,.9));box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 5px 12px rgba(0,0,0,.30);color:#fff4d8;text-decoration:none;font-size:clamp(10px,2.55vw,13px);font-weight:950;display:flex;align-items:center;justify-content:center;line-height:1.0;text-align:center;letter-spacing:-.06em;text-shadow:0 2px 5px rgba(0,0,0,.75)}
 .nav a.active{background:linear-gradient(180deg,#d49a22,#9b660d);border-color:rgba(255,224,142,.82);color:#fff8e6;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 5px 13px rgba(0,0,0,.34)}
-.sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheet p{margin:0 0 12px;color:rgba(255,255,255,.86);line-height:1.65;font-size:15px;white-space:pre-line}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
+.sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheetBody{margin-top:12px;color:rgba(255,255,255,.9);line-height:1.6;font-size:15px}.exploreCard{border:1px solid rgba(247,216,137,.18);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border-radius:18px;padding:14px 14px;margin:10px 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}.exploreCard.hero{border-color:rgba(247,216,137,.36);background:linear-gradient(180deg,rgba(247,216,137,.14),rgba(247,216,137,.045))}.cardLabel{display:flex;align-items:center;gap:7px;color:#f7d889;font-size:12px;font-weight:950;letter-spacing:-.03em;margin-bottom:7px}.cardMain{font-size:19px;line-height:1.35;color:#fff7df;font-weight:950;letter-spacing:-.055em}.cardAnswer{font-size:16px;line-height:1.45;color:#fff1c0;font-weight:900;letter-spacing:-.04em}.cardText{font-size:14.5px;line-height:1.72;color:rgba(255,255,255,.86);white-space:pre-line;letter-spacing:-.035em}.flowBox{display:grid;gap:8px;margin-top:4px}.flowItem{display:flex;align-items:center;gap:9px}.flowIcon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(247,216,137,.12);border:1px solid rgba(247,216,137,.25);font-size:16px;flex:0 0 auto}.flowText{font-size:14px;color:#fff6dd;font-weight:850;line-height:1.25}.flowArrow{margin-left:15px;color:#f7d889;opacity:.76;font-weight:900}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(18px);max-width:min(92vw,500px);background:rgba(8,13,18,.92);border:1px solid rgba(247,216,137,.32);color:#ffe7aa;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:850;opacity:0;transition:.22s;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.4)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 @media(max-width:390px){.btnRow{left:51.5%;width:44.5%;gap:1%}.matrixBtn{border-radius:10px;font-size:7.6px;gap:0;padding:0 1px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
 @media(min-width:680px){.phone{margin:18px 0;border-radius:28px}.bottomDock{border-radius:24px 24px 0 0}}
@@ -79,7 +79,7 @@ body{display:flex;justify-content:center}
     <a class="active" href="./hubs/index.html">허브</a>
   </nav>
 </footer>
-<div class="sheetBack" id="backdrop"></div><section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="grab"></div><button class="close" id="close" aria-label="닫기">×</button><h2 id="sheetTitle"></h2><div class="meta" id="sheetMeta"></div><p id="sheetBody"></p><div class="chips" id="chips"></div></section><div class="toast" id="toast"></div>
+<div class="sheetBack" id="backdrop"></div><section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle"><div class="grab"></div><button class="close" id="close" aria-label="닫기">×</button><h2 id="sheetTitle"></h2><div class="meta" id="sheetMeta"></div><div class="sheetBody" id="sheetBody"></div><div class="chips" id="chips"></div></section><div class="toast" id="toast"></div>
 <script>
 const DATA={
 "creationMeaning": {
@@ -276,7 +276,65 @@ const DATA={
 ]
 }
 };
-const sheet=document.getElementById('sheet'),backdrop=document.getElementById('backdrop'),title=document.getElementById('sheetTitle'),meta=document.getElementById('sheetMeta'),body=document.getElementById('sheetBody'),chips=document.getElementById('chips'),toast=document.getElementById('toast');function openSheet(key){const d=DATA[key]||DATA.creationHub;title.textContent=d.title;meta.textContent=d.meta;body.textContent=d.body;chips.innerHTML=d.chips.map(c=>`<span class="chip">${c}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showToast(b.textContent.trim()+' 보기');}));function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
+const RICH={
+creationMeaning:{q:'왜 인간은 존귀한가?',a:'인간은 하나님의 형상으로 창조되었다.',meaning:'하나님은 인간을 우연한 존재가 아니라 하나님의 형상으로 지으셨다.
+
+인간은 하나님을 대신하여 세상을 돌보고 다스리는 청지기로 부름받았다.
+
+창조는 인간의 존엄성과 가치, 관계와 사명의 출발점이다.',flow:['창조','하나님의 형상','청지기 사명','안식'],think:'나는 나와 다른 사람을 하나님의 형상으로 존중하고 있는가?'},
+creationPanorama:{q:'창조는 성경 전체에서 어디에 위치하는가?',a:'창조는 성경 전체 이야기의 시작점이다.',meaning:'하나님은 완전한 세상을 창조하셨지만 죄로 인해 세상은 깨어졌다.
+
+그러나 하나님은 구원의 역사를 통해 창조를 회복하시며 마지막에는 새하늘과 새땅으로 완성하신다.',flow:['🌎 창조','🍎 타락','✝ 구속','👑 새창조'],think:'성경은 무너진 창조를 회복하시는 하나님의 이야기로 이어진다.'},
+fallMeaning:{q:'왜 구원이 필요한가?',a:'죄는 하나님과 인간의 관계를 깨뜨렸다.',meaning:'하나님은 인간에게 자유롭게 순종할 수 있는 선택을 주셨다.
+
+그러나 인간은 하나님의 말씀보다 자신의 판단을 더 신뢰하며 선악과를 먹었다.
+
+그 결과 죄와 죽음이 세상에 들어오고 하나님과의 관계가 끊어졌다.',flow:['타락','죄와 죽음','관계의 단절','구원의 필요'],think:'나는 하나님의 말씀보다 내 판단을 더 신뢰하고 있지 않은가?'},
+fallPanorama:{q:'타락은 성경 전체에서 어떤 문제를 시작하는가?',a:'타락은 십자가가 필요한 이유를 보여준다.',meaning:'타락은 성경 전체 문제의 시작점이다.
+
+인간은 스스로 죄의 문제를 해결할 수 없게 되었고 하나님은 여자의 후손을 통해 구원의 약속을 주셨다.
+
+예수 그리스도의 십자가는 창세기 3장에서 시작된 문제에 대한 하나님의 해답이다.',flow:['타락','여자의 후손 약속','언약','메시아','십자가','회복'],think:'창세기의 타락은 복음서의 십자가로 이어진다.'},
+cainMeaning:{q:'참된 예배는 무엇인가?',a:'하나님은 제물보다 믿음의 마음을 보신다.',meaning:'가인과 아벨은 모두 하나님께 제사를 드렸지만 하나님은 아벨의 제사를 받으셨다.
+
+문제는 제물의 종류보다 하나님을 향한 마음과 믿음에 있었다.
+
+가인은 분노와 시기를 다스리지 못했고 결국 동생 아벨을 죽였다.',flow:['예배','믿음','시기와 분노','죄의 확산'],think:'나는 하나님께 어떤 마음으로 예배드리고 있는가?'},
+cainPanorama:{q:'아벨의 죽음은 어디로 이어지는가?',a:'아벨의 피는 그리스도의 보혈을 바라보게 한다.',meaning:'아벨은 믿음으로 하나님께 제사를 드린 최초의 의인으로 소개된다.
+
+그는 죄 없는 자가 죄로 인해 죽임을 당한 첫 번째 인물이기도 하다.
+
+아벨의 피는 억울함을 외쳤지만 예수님의 피는 죄인을 위한 용서와 구원을 선포한다.',flow:['아벨','의인의 고난','선지자들','예수 그리스도','구원'],think:'성경은 아벨의 죽음에서 끝나지 않고 더 의로운 분께로 시선을 이끈다.'},
+floodMeaning:{q:'왜 심판이 필요한가?',a:'하나님은 죄를 그냥 지나치지 않으신다.',meaning:'세상은 죄악으로 가득 차게 되었고 사람들은 하나님을 떠나 자신의 길을 따라 살아갔다.
+
+하나님은 홍수로 세상을 심판하셨지만 노아와 그의 가족은 방주를 통해 구원하셨다.
+
+노아홍수는 공의의 하나님이시며 동시에 구원의 길을 마련하시는 은혜의 하나님을 보여준다.',flow:['죄의 확산','홍수 심판','방주','은혜의 구원'],think:'하나님의 심판은 두려운 동시에 구원의 길을 보게 한다.'},
+floodPanorama:{q:'방주는 성경 전체에서 무엇을 가리키는가?',a:'방주는 그리스도 안의 구원을 미리 보여준다.',meaning:'방주는 하나님의 심판 가운데 준비된 유일한 구원의 길이었다.
+
+노아와 그의 가족이 방주 안에서 구원받은 것처럼 죄인은 예수 그리스도 안에서 구원을 얻는다.
+
+노아홍수는 마지막 심판을 예고하며 동시에 그리스도를 통한 구원의 모형을 보여준다.',flow:['노아홍수','방주','구원','그리스도','최후심판','새창조'],think:'심판의 이야기 안에도 하나님이 준비하신 구원의 길이 있다.'},
+babelMeaning:{q:'인간은 왜 하나님 없이 살려고 하는가?',a:'교만은 하나님보다 자기 이름을 높이려 한다.',meaning:'홍수 이후 사람들은 하나가 되어 하나님께 순종하기보다 스스로 이름을 내고 흩어짐을 거부하였다.
+
+그들은 하늘에 닿는 탑을 쌓으며 하나님 없이 자신들의 힘으로 위대해지려 했다.
+
+바벨탑은 인간의 교만과 자기중심성이 얼마나 깊은지를 보여준다.',flow:['교만','자기 이름','바벨탑','흩어짐'],think:'내가 하나님 없이 세우려는 바벨탑은 무엇인가?'},
+babelPanorama:{q:'바벨의 흩어짐은 어떻게 회복되는가?',a:'흩어진 열방은 복음 안에서 다시 회복된다.',meaning:'바벨탑 사건은 인류가 언어와 민족으로 흩어지는 출발점이 되었다.
+
+그러나 하나님은 흩어진 열방을 포기하지 않으셨다.
+
+바벨 직후 하나님은 아브라함을 부르시고 모든 민족이 복을 얻을 것이라고 약속하셨다. 오순절 성령강림은 바벨의 혼잡을 거꾸로 뒤집는 사건이다.',flow:['바벨탑','열방의 흩어짐','아브라함의 부르심','복음의 확장','오순절','열방의 회복'],think:'하나님은 흩어진 열방까지 회복하시는 분이다.'}
+};
+const sheet=document.getElementById('sheet'),backdrop=document.getElementById('backdrop'),title=document.getElementById('sheetTitle'),meta=document.getElementById('sheetMeta'),body=document.getElementById('sheetBody'),chips=document.getElementById('chips'),toast=document.getElementById('toast');
+function esc(x){return String(x||'').replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
+function renderRich(key,d){const r=RICH[key];if(!r){return `<div class="exploreCard"><div class="cardText">${esc(d.body).replace(/\n/g,'<br>')}</div></div>`;}const isPan=key.toLowerCase().includes('panorama');const flow=(r.flow||[]).map((f,i)=>`<div class="flowItem"><div class="flowIcon">${isPan?'↗':'●'}</div><div class="flowText">${esc(f)}</div></div>${i<(r.flow.length-1)?'<div class="flowArrow">↓</div>':''}`).join('');return `
+<div class="exploreCard hero"><div class="cardLabel">❓ 핵심질문</div><div class="cardMain">${esc(r.q)}</div></div>
+<div class="exploreCard"><div class="cardLabel">💡 한 줄 핵심</div><div class="cardAnswer">${esc(r.a)}</div></div>
+<div class="exploreCard"><div class="cardLabel">📖 ${isPan?'구속사 의미':'사건의 의미'}</div><div class="cardText">${esc(r.meaning).replace(/\n/g,'<br>')}</div></div>
+<div class="exploreCard"><div class="cardLabel">🔗 ${isPan?'성경 전체 흐름':'연결 흐름'}</div><div class="flowBox">${flow}</div></div>
+<div class="exploreCard"><div class="cardLabel">🤔 생각해보기</div><div class="cardText">${esc(r.think)}</div></div>`;}
+function openSheet(key){const d=DATA[key]||DATA.creationHub;title.textContent=d.title;meta.textContent=d.meta;body.innerHTML=renderRich(key,d);chips.innerHTML=(d.chips||[]).map(c=>`<span class="chip">${esc(c)}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');showToast(b.textContent.trim()+' 보기');}));function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
 </script>
 
 </body>
