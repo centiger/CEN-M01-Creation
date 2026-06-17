@@ -1,4 +1,10 @@
 {
+  "defaultHub": "creation",
+  "hubs": [
+
+
+
+{
   "id": "creation",
   "icon": "🌍",
   "title": "창조 허브",
@@ -397,3 +403,5 @@
   "nextUrl": "https://centiger.github.io/CEN-M02-Patriarch/",
   "nextLabel": "족장시대 Matrix"
 }
+
+    
