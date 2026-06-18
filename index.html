@@ -104,7 +104,14 @@ function openExplore(key,type){const d=(EXPLORE[key]&&EXPLORE[key][type])||null;
 function openSheet(key){const d=DATA[key]||DATA.creation;title.textContent=d.title;meta.textContent=d.meta;body.textContent=d.body;chips.innerHTML=d.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join('');sheet.classList.add('show');backdrop.classList.add('show')}
 function closeSheet(){sheet.classList.remove('show');backdrop.classList.remove('show')}
 const HUB_ROUTES={creationHub:'creation',fallHub:'fall',cainHub:'cain',judgmentHub:'flood',nationsHub:'babel',abrahamHub:'abraham'};
-document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;const type=el.dataset.type;if(type==='meaning'||type==='panorama'){openExplore(key,type);return;}if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));
+document.querySelectorAll('[data-key]').forEach(el=>el.addEventListener('click',e=>{e.stopPropagation();const key=el.dataset.key;const type=el.dataset.type;if(type==='meaning'){
+    location.href='./hubs/index.html?hub='+key+'#connections';
+    return;
+  }
+  if(type==='panorama'){
+    location.href='./hubs/index.html?hub='+key+'#integration';
+    return;
+  }if(HUB_ROUTES[key]){location.href='./hubs/index.html?hub='+HUB_ROUTES[key];return;}openSheet(key)}));
 document.getElementById('close').addEventListener('click',closeSheet);backdrop.addEventListener('click',closeSheet);
 function showToast(t){toast.textContent=t;toast.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove('show'),1100)}
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/CEN-M01-Creation/sw.js', {scope:'/CEN-M01-Creation/'}).catch(()=>{}));}
