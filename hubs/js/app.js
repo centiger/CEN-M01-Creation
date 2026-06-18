@@ -32,26 +32,12 @@ function render(slug){
   if(n){btn.style.display='block';btn.textContent=`다음: ${n.title} →`;btn.onclick=()=>go(n.slug)}
   else if(h.nextUrl){btn.style.display='block';btn.textContent=(h.nextLabel||'다음 시대로 이동')+' →';btn.onclick=()=>{location.href=h.nextUrl}}
   else{btn.style.display='none'}
-  const targetHash = location.hash;
-history.replaceState(null,'',`?hub=${h.slug}${targetHash||''}`);
-if(targetHash){
-  setTimeout(()=>{
-    const target=document.querySelector(targetHash);
-    if(target){
-      target.scrollIntoView({behavior:'smooth',block:'start'});
-    }
-  },120);
-}
-}function go(slug){
-  history.replaceState(null,'',`?hub=${slug}`);
-  render(slug);
-  window.scrollTo({top:0,behavior:'smooth'});
-}
+  history.replaceState(null,'',`?hub=${h.slug}`);
 }
 function renderPending(h){
   $('title').textContent=`${h.icon||''} ${h.title}`;$('subtitle').textContent=h.subtitle||'제작 예정';$('verse').textContent='이 허브는 다음 단계에서 제작할 예정입니다.';$('map').src='assets/maps/creation-hub-map.png';$('caption').textContent='창조시대 허브 구조에 맞춰 PNG 교체형 지도 영역을 유지합니다.';$('events').innerHTML='<div class="item">제작 예정입니다.</div>';$('meanings').innerHTML='<li>내용 추가 예정</li>';$('connections').innerHTML='<span class="chip">준비중</span>'; if($('integration')) $('integration').innerHTML='<span class="chip">준비중</span>';$('references').innerHTML='<span class="chip">준비중</span>';$('nextBtn').style.display='none';history.replaceState(null,'',`?hub=${h.slug}`);
 }
-
+function go(slug){render(slug);window.scrollTo({top:0,behavior:'smooth'})}
 function openList(){
   $('hubList').innerHTML=DATA.hubs.map(h=>`<button class="hubOpt" onclick="closeList();go('${h.slug}')">${h.icon||''} ${h.title}<small>${h.subtitle||''}${h.ready?'':' · 제작 예정'}</small></button>`).join('');
   $('dialog').classList.add('show')
