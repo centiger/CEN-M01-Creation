@@ -30,9 +30,9 @@ body{display:flex;justify-content:center}
 .eventTitle h2{margin:0;color:var(--white);font-size:clamp(11px,2.75vw,18px);font-weight:600;letter-spacing:-.055em;white-space:nowrap}.eventTitle .desc{margin:.32em 0 0;color:#ffe28a;font-size:clamp(7.8px,1.75vw,10.5px);font-weight:700;line-height:1.28;letter-spacing:-.05em;word-break:keep-all;overflow-wrap:normal}.eventTitle .ref{margin:.42em 0 0;color:#fff;font-size:clamp(7.4px,1.55vw,9.2px);font-weight:650;opacity:.95}
 .t1{top:7.35%}.t2{top:19.95%}.t3{top:33.3%}.t4{top:46.4%}.t5{top:59.8%}.t6{top:72.8%}
 /* 버튼은 각 사건 박스의 상단~2/3 지점 사이, 같은 X축 기준으로 정렬 */
-.btnRow{position:absolute;z-index:7;left:49.5%;width:47.5%;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1.4%;height:3.35%;line-height:1}
+.btnRow{position:absolute;z-index:7;left:51.2%;width:44.4%;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:1.4%;height:3.35%;line-height:1}
 .r1{top:13.65%}.r2{top:24.6%}.r3{top:38.0%}.r4{top:52.9%}.r5{top:66.55%}
-.matrixBtn{min-width:120px;border:1px solid rgba(247,216,137,.52);border-radius:12px;background:linear-gradient(180deg,rgba(18,21,24,.84),rgba(5,8,12,.82));box-shadow:0 6px 16px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(5px);color:#f7ead0;font-size:clamp(8px,1.85vw,10.5px);font-weight:850;text-shadow:0 1px 2px rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;gap:4px;line-height:1.05;padding:0 4px;cursor:pointer;white-space:nowrap;text-align:center}.matrixBtn .ico{font-size:1.22em;color:var(--gold);line-height:1}.matrixBtn.judgment{border-color:rgba(235,132,171,.75);background:linear-gradient(180deg,rgba(64,33,49,.86),rgba(18,10,17,.82))}.matrixBtn.covenant{border-color:rgba(208,155,255,.72);background:linear-gradient(180deg,rgba(51,36,75,.85),rgba(14,10,24,.83))}.matrixBtn.nations{border-color:rgba(245,185,81,.75);background:linear-gradient(180deg,rgba(83,55,18,.86),rgba(22,14,6,.82))}
+.matrixBtn{min-width:110px;border:1px solid rgba(247,216,137,.52);border-radius:12px;background:linear-gradient(180deg,rgba(18,21,24,.84),rgba(5,8,12,.82));box-shadow:0 6px 16px rgba(0,0,0,.38), inset 0 1px 0 rgba(255,255,255,.08);backdrop-filter:blur(5px);color:#f7ead0;font-size:clamp(8px,1.85vw,10.5px);font-weight:850;text-shadow:0 1px 2px rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;gap:4px;line-height:1.05;padding:0 4px;cursor:pointer;min-width:0;white-space:normal;text-align:center}.matrixBtn .ico{font-size:1.22em;color:var(--gold);line-height:1}.matrixBtn.judgment{border-color:rgba(235,132,171,.75);background:linear-gradient(180deg,rgba(64,33,49,.86),rgba(18,10,17,.82))}.matrixBtn.covenant{border-color:rgba(208,155,255,.72);background:linear-gradient(180deg,rgba(51,36,75,.85),rgba(14,10,24,.83))}.matrixBtn.nations{border-color:rgba(245,185,81,.75);background:linear-gradient(180deg,rgba(83,55,18,.86),rgba(22,14,6,.82))}
 /* 6번은 사건이 아니라 다음 시대 입구로 보이게 상징 오른쪽 아래로 분리 */
 .nextBtn{position:absolute;z-index:8;left:18.0%;top:78.9%;height:3.3%;min-width:22%;padding:0 4%;border:1px solid rgba(208,155,255,.66);border-radius:999px;background:linear-gradient(180deg,rgba(72,47,101,.86),rgba(25,14,43,.88));color:#f3e8ff;font-size:clamp(10px,2.45vw,15px);font-weight:850;box-shadow:0 7px 18px rgba(0,0,0,.4);text-shadow:0 1px 3px rgba(0,0,0,.75);cursor:pointer}
 .hot{position:absolute;z-index:6;border:0;background:transparent;cursor:pointer;border-radius:18px}.hot:focus-visible{outline:2px solid var(--gold);background:rgba(247,216,137,.11)}
@@ -45,7 +45,7 @@ body{display:flex;justify-content:center}
 .nav a.active{background:linear-gradient(180deg,#d49a22,#9b660d);border-color:rgba(255,224,142,.82);color:#fff8e6;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 5px 13px rgba(0,0,0,.34)}
 .sheetBack{position:fixed;inset:0;background:rgba(0,0,0,.48);opacity:0;pointer-events:none;transition:.22s;z-index:40}.sheetBack.show{opacity:1;pointer-events:auto}.sheet{position:fixed;left:50%;bottom:0;transform:translate(-50%,105%);width:100%;max-width:560px;z-index:50;max-height:73svh;overflow:auto;background:linear-gradient(180deg,rgba(24,32,40,.98),rgba(6,11,17,.99));border:1px solid rgba(247,216,137,.28);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -24px 60px rgba(0,0,0,.55);padding:18px 18px calc(24px + env(safe-area-inset-bottom));transition:.26s cubic-bezier(.2,.9,.2,1)}.sheet.show{transform:translate(-50%,0)}.grab{width:44px;height:5px;border-radius:999px;background:rgba(255,255,255,.26);margin:0 auto 14px}.close{position:absolute;right:16px;top:16px;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.08);color:#fff;font-size:22px}.sheet h2{margin:0 44px 5px 0;font-size:24px;letter-spacing:-.05em;color:#fff}.sheet .meta{color:var(--gold);font-weight:950;font-size:14px;margin-bottom:12px}.sheet p{margin:0 0 12px;color:rgba(255,255,255,.86);line-height:1.65;font-size:15px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid rgba(247,216,137,.26);background:rgba(247,216,137,.08);color:#f8e4aa;border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850}
 .toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(18px);max-width:min(92vw,500px);background:rgba(8,13,18,.92);border:1px solid rgba(247,216,137,.32);color:#ffe7aa;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:850;opacity:0;transition:.22s;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.4)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:390px){.btnRow{left:49.2%;width:48.2%;gap:1%}.matrixBtn{min-width:112px;border-radius:10px;font-size:8.3px;gap:1px;padding:0 3px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
+@media(max-width:390px){.btnRow{left:51.5%;width:44.5%;gap:1%}.matrixBtn{border-radius:10px;font-size:8.3px;gap:1px;padding:0 2px}.eventTitle{left:18.4%;width:39.8%}.scrim{left:15.7%;width:45%}}
 @media(min-width:680px){.phone{margin:18px 0;border-radius:28px}.bottomDock{border-radius:24px 24px 0 0}}
 
 /* CEN 3.0 Meaning / Panorama 탐험형 팝업 */
@@ -62,43 +62,20 @@ body{display:flex;justify-content:center}
 
 </style>
 
-<style id="m01-button-text-v2-fix">
-/* M01 메인 버튼명 v2 */
-.action-btn,
-.event-btn,
-.hub-btn,
-button[class*="btn"],
-a[class*="btn"]{
-  min-width: 96px;
-  white-space: nowrap;
-}
-.action-btn span,
-.event-btn span,
-.hub-btn span,
-button[class*="btn"] span,
-a[class*="btn"] span{
-  white-space: nowrap;
-}
-</style>
 
-
-<style id="m01-r3-position-fix">
-/* M01 가인과 아벨 버튼 위치 및 버튼 폭 보정 */
+<style id="m01-safe-r3-only-fix">
+/* M01 안전복구: 가인과 아벨 버튼만 아래로 이동 */
 .r3{top:38.0% !important;}
 .matrixBtn{
-  min-width:112px !important;
-  white-space:nowrap !important;
-}
-.matrixBtn .ico{
-  flex:0 0 auto;
+  min-width:0 !important;
+  max-width:100% !important;
+  white-space:normal !important;
+  overflow:hidden !important;
 }
 @media(max-width:390px){
+  .btnRow{left:51.5%;width:44.5%;gap:1%}
   .r3{top:38.2% !important;}
-  .matrixBtn{
-    min-width:104px !important;
-    font-size:8.2px !important;
-    padding:0 3px !important;
-  }
+  .matrixBtn{min-width:0 !important;font-size:8.1px !important;padding:0 2px !important;}
 }
 </style>
 
