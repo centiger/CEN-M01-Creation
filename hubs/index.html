@@ -32,6 +32,14 @@ a[class*="btn"] span{
 }
 </style>
 
+
+<style id="cen-hash-scroll-margin-fix">
+#connections,
+#integration{
+  scroll-margin-top:90px;
+}
+</style>
+
 </head>
 <body><main class="phone">
 <header class="top"><button onclick="location.href='../index.html'">← Matrix</button><div class="ttl">창조시대 허브</div><button onclick="openList()">허브목록</button></header>
@@ -39,11 +47,27 @@ a[class*="btn"] span{
 <section class="mapBox"><img id="map" alt="허브 지도"><div class="caption" id="caption"></div></section>
 <section class="section"><h2>핵심사건</h2><div class="flow" id="events"></div></section>
 <section class="section"><h2>핵심의미</h2><ul class="bul" id="meanings"></ul></section>
-<section class="section"><h2>Meaning</h2><div id="connections"></div></section>
-<section class="section"><h2>파노라마</h2><div id="integration"></div></section>
+<section class="section" id="connections"><h2>Meaning</h2><div id="connectionsList"></div></section>
+<section class="section" id="integration"><h2>파노라마</h2><div id="integrationList"></div></section>
 <section class="section"><h2>관련성경</h2><div class="chips" id="references"></div></section>
 <div class="bottom"><button class="bigBtn" onclick="location.href='../index.html'">매트릭스로</button><button class="bigBtn" onclick="openList()">허브목록</button><button class="bigBtn next" id="nextBtn"></button></div>
 </main>
 <div class="dialog" id="dialog" onclick="if(event.target.id==='dialog')closeList()"><div class="panel"><h2>창조시대 허브 목록</h2><div class="hubList" id="hubList"></div><button class="bigBtn" style="margin-top:14px;width:100%" onclick="closeList()">닫기</button></div></div><div class="toast" id="toast"></div>
+
+<script id="m01-hash-anchor-compat">
+(function(){
+  const originalGet = document.getElementById.bind(document);
+  document.getElementById = function(id){
+    if(id === 'connections'){
+      return originalGet('connectionsList') || originalGet('connections');
+    }
+    if(id === 'integration'){
+      return originalGet('integrationList') || originalGet('integration');
+    }
+    return originalGet(id);
+  };
+})();
+</script>
+
 <script src="./js/app.js"></script>
 </body></html>
