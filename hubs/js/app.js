@@ -1,4 +1,4 @@
-5let DATA=null, current=null;
+let DATA=null, current=null;
 const $=id=>document.getElementById(id);
 function qs(){return new URLSearchParams(location.search)}
 function escapeHtml(s){return String(s??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}
@@ -92,9 +92,9 @@ function render(slug){
   $('caption').textContent=h.mapCaption||'';
   $('events').innerHTML=(h.events||[]).map(x=>`<div class="item">${x}</div>`).join('');
   $('meanings').innerHTML=(h.meanings||[]).map(x=>`<li>${x}</li>`).join('');
-  $('connectionsList').innerHTML=renderExplore(h.connections||[]);
-  const integrationEl=$('integrationList');
-if(integrationEl) integrationEl.innerHTML=renderExplore(h.integration||[]);
+  $('connections').innerHTML=renderExplore(h.connections||[]);
+  const integrationEl=$('integration');
+  if(integrationEl) integrationEl.innerHTML=renderExplore(h.integration||[]);
   $('references').innerHTML=(h.references||[]).map(x=>`<span class="chip">${escapeHtml(x)}</span>`).join('');
   const n=h.next?find(h.next):null;
   const btn=$('nextBtn');
