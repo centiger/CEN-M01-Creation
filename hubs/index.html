@@ -40,6 +40,29 @@ a[class*="btn"] span{
 }
 </style>
 
+
+<style id="m01-vertical-flow-v32-fix">
+/* M01 Meaning/파노라마 세로 흐름 복구 */
+.flowLine{
+  display:block;
+  text-align:center;
+  font-weight:900;
+  padding:4px 0;
+}
+.flowArrow{
+  display:block;
+  text-align:center;
+  font-size:20px;
+  line-height:1;
+  color:#f7d889;
+  margin:2px 0 4px;
+}
+.exploreCard p .flowLine,
+.exploreCard p .flowArrow{
+  white-space:normal;
+}
+</style>
+
 </head>
 <body><main class="phone">
 <header class="top"><button onclick="location.href='../index.html'">← Matrix</button><div class="ttl">창조시대 허브</div><button onclick="openList()">허브목록</button></header>
@@ -69,5 +92,5 @@ a[class*="btn"] span{
 })();
 </script>
 
-<script src="./js/app.js"></script>
+<script src="./js/app.js?v=m01-v32-flowfix"></script>
 </body></html>
