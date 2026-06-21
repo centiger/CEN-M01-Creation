@@ -63,7 +63,7 @@ function renderExplore(items){
 }
 
 async function init(){
-  const res=await fetch('./data/hubs.json?v=m01-v32-flowfix'); DATA=await res.json();
+  const res=await fetch('./data/hubs.json?v=creation-v31-stable'); DATA=await res.json();
   const slug=qs().get('hub')||DATA.defaultHub||'creation'; render(slug);
 }
 function find(slug){return DATA.hubs.find(h=>h.slug===slug)||DATA.hubs[0]}
